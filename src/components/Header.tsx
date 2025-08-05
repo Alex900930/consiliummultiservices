@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { useTranslation } from 'react-i18next';
 import consiliumLogo from "@/assets/consilium-logo.png";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -10,11 +10,23 @@ const Header = () => {
   const { t } = useTranslation();
 
   const navItems = [
-    { name: t('nav.inicio'), href: "#inicio" },
-    { name: t('nav.nosotros'), href: "#nosotros" },
-    { name: t('nav.servicios'), href: "#servicios" },
-    { name: t('nav.paquetes'), href: "#paquetes" },
-    { name: t('nav.contacto'), href: "#contacto" },
+    { name: "Inicio", href: "#inicio" },
+    { 
+      name: "Servicios Contables", 
+      href: "#servicios",
+      submenu: [
+        { name: "Bookkeeping Mensual", href: "#bookkeeping" },
+        { name: "Cuentas por Cobrar y Pagar", href: "#cuentas" },
+        { name: "Payroll Básico", href: "#payroll" },
+        { name: "Presentación de Taxes", href: "#taxes" },
+        { name: "Consultoría y Asesoría", href: "#consultoria" },
+        { name: "Servicios Premium", href: "#premium" }
+      ]
+    },
+    { name: "Nosotros", href: "#nosotros" },
+    { name: "Equipo", href: "#equipo" },
+    { name: "Testimonios", href: "#testimonios" },
+    { name: "Contacto", href: "#contacto" },
   ];
 
   return (
@@ -24,29 +36,53 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img src={consiliumLogo} alt="Consilium Multiservices LLC" className="h-16 w-36" />
-            {/* <div className="text-lg font-bold text-foreground">
-              CONSILIUM MULTISERVICES LLC
-            </div> */}
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
-              >
-                {item.name}
-              </a>
+              <div key={item.name} className="relative group">
+                <a
+                  href={item.href}
+                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium flex items-center space-x-1"
+                >
+                  <span>{item.name}</span>
+                  {item.submenu && (
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  )}
+                </a>
+                
+                {/* Dropdown for Services */}
+                {item.submenu && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <div className="py-2">
+                      {item.submenu.map((subItem) => (
+                        <a
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors duration-200"
+                        >
+                          {subItem.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
 
-          {/* Language Switcher & CTA Button */}
+          {/* Phone & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
+            <div className="flex items-center space-x-2 text-primary font-semibold">
+              <Phone size={20} />
+              <span>Llamenos</span>
+            </div>
             <LanguageSwitcher />
             <Button className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold px-6 py-2 shadow-golden">
-              {t('nav.cta')}
+              ¡Agende su cita hoy!
             </Button>
           </div>
 
@@ -64,19 +100,41 @@ const Header = () => {
           <div className="lg:hidden mt-4 pb-4 border-t border-border">
             <nav className="flex flex-col space-y-4 mt-4">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                <div key={item.name}>
+                  <a
+                    href={item.href}
+                    className="text-foreground hover:text-primary transition-colors duration-200 font-medium block"
+                    onClick={() => !item.submenu && setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                  
+                  {/* Mobile Submenu */}
+                  {item.submenu && (
+                    <div className="ml-4 mt-2 space-y-2">
+                      {item.submenu.map((subItem) => (
+                        <a
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="text-gray-600 hover:text-primary transition-colors duration-200 block text-sm"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          • {subItem.name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
-              <div className="flex flex-col space-y-3 mt-4">
+              
+              <div className="flex flex-col space-y-3 mt-4 pt-4 border-t border-border">
+                <div className="flex items-center space-x-2 text-primary font-semibold">
+                  <Phone size={20} />
+                  <span>Llamenos</span>
+                </div>
                 <LanguageSwitcher />
                 <Button className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold px-6 py-2 shadow-golden w-full">
-                  {t('nav.cta')}
+                  ¡Agende su cita hoy!
                 </Button>
               </div>
             </nav>

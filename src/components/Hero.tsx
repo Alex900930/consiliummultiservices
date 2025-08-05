@@ -1,92 +1,184 @@
 import { Button } from "@/components/ui/button";
-import { useTranslation } from 'react-i18next';
+import { Input } from "@/components/ui/input";
+import { Mail, Phone } from "lucide-react";
 
 const Hero = () => {
-  const { t } = useTranslation();
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Video */}
-      <div className="absolute inset-0">
-        <div className="w-full h-full relative overflow-hidden">
+    <>
+      {/* Hero Section */}
+      <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* 1. Background (Video y Fallback de Imagen) */}
+        <div className="absolute inset-0 z-0">
+          {/* Video para Desktop: limpio y sin overlays oscuros */}
           <video
             autoPlay
             muted
             loop
             playsInline
-            // Aclaramos ligeramente el video y ajustamos el contraste
-            className="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2 filter brightness-110 contrast-100"
+            className="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2 hidden md:block"
             style={{ pointerEvents: 'none' }}
           >
+            {/* Nombre del video corregido */}
             <source src="/videoBackground.mp4" type="video/mp4" />
-            {/* Fallback a YouTube. Nota: Los filtros de CSS no se aplicarán al <iframe> */}
-            <iframe
-              src="https://www.youtube.com/embed/J2WzZ4G4xbA?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&start=4&playlist=J2WzZ4G4xbA"
-              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] transform -translate-x-1/2 -translate-y-1/2"
-              frameBorder="0"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-              style={{ pointerEvents: 'none' }}
-            />
+            Tu navegador no soporta el tag de video.
           </video>
-        </div>
-        {/* El degradado ahora es más sutil */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20"></div>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 mt-20 md:mt-8 text-center text-white">
-        {/* Contenedor principal con efecto "Glassmorphism" */}
-        <div 
-          className="max-w-4xl mx-auto space-y-8 bg-black/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 shadow-lg"
-        >
-          <h1 className="text-5xl lg:text-7xl font-bold leading-tight"
-              // Sombra de texto para máxima legibilidad
-              style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.7)' }}>
-            {t('hero.title')}
-            <span className="text-primary"> {t('hero.subtitle')}</span>
-          </h1>
           
-          <p className="text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed"
-             style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.5)' }}>
-            {t('hero.description')}
-          </p>
-
-          <div className="space-y-4 lg:space-y-0 lg:space-x-6 lg:flex lg:justify-center">
-            <Button 
-              size="lg" 
-              className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-bold px-8 py-4 text-lg shadow-golden transform hover:scale-105 transition-all duration-300"
-            >
-              {t('hero.cta')}
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg"
-            >
-              {t('hero.secondary')}
-            </Button>
-          </div>
+          {/* Imagen estática para tablet y móvil */}
+          <img
+            src="/Imagen1.jpg"
+            alt="Servicios profesionales de contabilidad"
+            className="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2 md:hidden"
+          />
+          
+          {/* Gradiente sutil solo en la parte inferior para legibilidad del texto */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 mt-20 max-w-4xl mx-auto">
-          {/* Se aplica el mismo principio a las estadísticas */}
-          <div className="text-center bg-black/10 backdrop-blur-sm p-4 rounded-lg border border-white/10">
-            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.6)' }}>500+</div>
-            <div className="text-lg text-gray-300">Servicios exitosos</div>
-          </div>
-          <div className="text-center bg-black/10 backdrop-blur-sm p-4 rounded-lg border border-white/10">
-            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.6)' }}>3800+</div>
-            <div className="text-lg text-gray-300">Clientes satisfechos</div>
-          </div>
-          <div className="text-center bg-black/10 backdrop-blur-sm p-4 rounded-lg border border-white/10">
-            <div className="text-4xl lg:text-5xl font-bold text-primary mb-2" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.6)' }}>98%</div>
-            <div className="text-lg text-gray-300">Casos resueltos</div>
+        {/* 2. Contenido Principal */}
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+            
+            {/* Columna Izquierda: Mensaje y CTA */}
+            <div className="text-white space-y-6 text-center md:text-left">
+              <h1 
+                className="text-5xl md:text-7xl font-bold leading-tight"
+                style={{ textShadow: '0 4px 15px rgba(0, 0, 0, 0.7)' }}
+              >
+                Organizamos sus <span className="text-primary">finanzas</span>
+              </h1>
+              
+              <p 
+                className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto md:mx-0"
+                style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.6)' }}
+              >
+                — <span className="font-semibold">Yainier Consillium</span>, CEO y Contador Principal
+              </p>
+
+              <blockquote 
+                className="text-lg text-gray-200 italic border-l-4 border-primary pl-6 max-w-2xl mx-auto md:mx-0 hidden md:block"
+                style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.5)' }}
+              >
+                "Nuestra misión es mantener sus finanzas claras y sus impuestos al día, para que usted pueda enfocarse en hacer crecer su negocio."
+              </blockquote>
+
+              <div className="pt-4">
+                {/* Botón CTA con los colores de marca solicitados */}
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-bold px-10 py-6 text-xl shadow-golden transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+                >
+                  Agendar Consulta Gratuita
+                </Button>
+              </div>
+            </div>
+
+            {/* Columna Derecha: Formulario de Contacto - Solo visible en Desktop */}
+            <div className="hidden md:flex md:justify-end">
+              <div className="bg-white/95 backdrop-blur-md rounded-xl p-8 shadow-2xl w-full max-w-md border border-white/20">
+                <div className="text-center mb-6">
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    Contacte a un Experto
+                  </h2>
+                  <p className="text-gray-600 mt-1">
+                    Reciba una consulta gratuita y sin compromiso.
+                  </p>
+                </div>
+
+                <form className="space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="nombre" className="sr-only">Nombre</label>
+                      <Input id="nombre" type="text" placeholder="Nombre" required />
+                    </div>
+                    <div>
+                      <label htmlFor="apellidos" className="sr-only">Apellidos</label>
+                      <Input id="apellidos" type="text" placeholder="Apellidos" required />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="phone" className="sr-only">Número de Teléfono</label>
+                    <Input id="phone" type="tel" placeholder="Número de Teléfono" required />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="sr-only">Correo Electrónico</label>
+                    <Input id="email" type="email" placeholder="Correo Electrónico" required />
+                  </div>
+                  
+                  {/* Botón del formulario con los colores de marca */}
+                  <Button 
+                    type="submit"
+                    size="lg"
+                    className="w-full font-bold text-base bg-gradient-primary hover:bg-primary-dark text-primary-foreground shadow-golden"
+                  >
+                    Enviar para mi Consulta
+                  </Button>
+
+                  <p className="text-xs text-gray-500 text-center pt-1">
+                    Su información es 100% confidencial.
+                  </p>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-    </section>
+      {/* Formulario para Tablet y Móvil - Debajo del Hero */}
+      <section className="md:hidden bg-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-md mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                Contacte a un Experto
+              </h2>
+              <p className="text-gray-600">
+                Reciba una consulta gratuita y sin compromiso.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 shadow-xl border border-gray-200">
+              <form className="space-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="nombre-mobile" className="sr-only">Nombre</label>
+                    <Input id="nombre-mobile" type="text" placeholder="Nombre" required />
+                  </div>
+                  <div>
+                    <label htmlFor="apellidos-mobile" className="sr-only">Apellidos</label>
+                    <Input id="apellidos-mobile" type="text" placeholder="Apellidos" required />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="phone-mobile" className="sr-only">Número de Teléfono</label>
+                  <Input id="phone-mobile" type="tel" placeholder="Número de Teléfono" required />
+                </div>
+
+                <div>
+                  <label htmlFor="email-mobile" className="sr-only">Correo Electrónico</label>
+                  <Input id="email-mobile" type="email" placeholder="Correo Electrónico" required />
+                </div>
+                
+                {/* Botón del formulario con los colores de marca */}
+                <Button 
+                  type="submit"
+                  size="lg"
+                  className="w-full font-bold text-base bg-gradient-primary hover:bg-primary-dark text-primary-foreground shadow-golden"
+                >
+                  Enviar para mi Consulta
+                </Button>
+
+                <p className="text-xs text-gray-500 text-center pt-1">
+                  Su información es 100% confidencial.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

@@ -7,17 +7,19 @@ const Footer = () => {
   const quickLinks = [
     { name: "Inicio", href: "#inicio" },
     { name: "Nosotros", href: "#nosotros" },
-    { name: "Servicios", href: "#servicios" },
-    { name: "Paquetes", href: "#paquetes" },
+    { name: "Servicios Contables", href: "#servicios" },
+    { name: "Equipo", href: "#equipo" },
+    { name: "Testimonios", href: "#testimonios" },
     { name: "Contacto", href: "#contacto" },
   ];
 
   const services = [
-    { name: "Bookkeeping", href: "#servicios" },
-    { name: "Payroll", href: "#servicios" },
-    { name: "Tax Preparation", href: "#servicios" },
-    { name: "CFO Virtual", href: "#servicios" },
-    { name: "Consultoría Fiscal", href: "#servicios" },
+    { name: "Bookkeeping Mensual", href: "#servicios" },
+    { name: "Cuentas por Cobrar y Pagar", href: "#servicios" },
+    { name: "Payroll Básico", href: "#servicios" },
+    { name: "Presentación de Taxes", href: "#servicios" },
+    { name: "Consultoría y Asesoría", href: "#servicios" },
+    { name: "Servicios Premium", href: "#servicios" },
   ];
 
   return (
@@ -33,16 +35,17 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-background/80 leading-relaxed">
-              Más que contadores, tu aliado estratégico para llevar tus finanzas al próximo nivel.
+              Especialistas en servicios de bookkeeping, contabilidad y asesoría para contratistas, 
+              pequeños negocios y emprendedores.
             </p>
             <div className="text-primary font-semibold italic">
-              "Nuestro mayor servicio es tu confianza"
+              "Su confianza es nuestro compromiso"
             </div>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-primary">Contáctanos</h3>
+            <h3 className="text-xl font-bold text-primary">Contáctenos</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
@@ -108,7 +111,7 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-primary">Servicios</h3>
+            <h3 className="text-xl font-bold text-primary">Servicios Contables</h3>
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
@@ -124,7 +127,7 @@ const Footer = () => {
 
             <div className="pt-4">
               <button className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold px-6 py-3 rounded-lg shadow-golden hover:scale-105 transition-all duration-300 w-full">
-                Consulta Gratuita
+                ¡Agende su cita hoy!
               </button>
             </div>
           </div>
