@@ -1,56 +1,52 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ReactCountryFlag from 'react-country-flag';
 import { Button } from '@/components/ui/button';
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
-  // Inicializamos el estado con el idioma actual de i18n, por si acaso no es 'es'
-  const [currentLang, setCurrentLang] = useState(i18n.language.split('-')[0]);
+  const currentLang = i18n.language.split('-')[0]; // 'es' o 'en'
 
   const toggleLanguage = () => {
     const newLang = currentLang === 'es' ? 'en' : 'es';
     i18n.changeLanguage(newLang);
-    setCurrentLang(newLang);
   };
+
+  // --- Lógica de Visualización Corregida ---
+  // Determina qué bandera y texto mostrar basado en el idioma ACTUAL
+  const displayConfig = {
+    es: {
+      countryCode: 'ES', // Código de país para España
+      label: 'ES',
+      title: 'Change to English', // Tooltip para la acción
+    },
+    en: {
+      countryCode: 'US', // Código de país para Estados Unidos
+      label: 'EN',
+      title: 'Cambiar a Español', // Tooltip para la acción
+    },
+  };
+
+  const { countryCode, label, title } = displayConfig[currentLang] || displayConfig.en;
 
   return (
     <Button
-      variant="outline"
-      size="sm"
+      variant="ghost" // Usamos 'ghost' para un estilo más limpio, como en el ejemplo
+      size="icon"
       onClick={toggleLanguage}
-      className="flex items-center space-x-2 p-2 hover:bg-gray-100 transition-colors"
-      title={currentLang === 'es' ? 'Change to English' : 'Cambiar a Español'}
+      className="flex items-center space-x-2 p-2"
+      title={title} // El tooltip ahora describe la acción que se va a realizar
     >
-      <div className="flex items-center justify-center" style={{ fontSize: '1.5em' }}>
-        {currentLang === 'es' ? (
-          // Bandera de Estados Unidos para cambiar a Inglés
-          <ReactCountryFlag
-            countryCode="US"
-            svg
-            style={{
-              width: '1.5em',
-              height: '1.5em',
-            }}
-            title="USA"
-          />
-        ) : (
-          // Bandera de Cuba para cambiar a Español
-          <ReactCountryFlag
-            countryCode="CU"
-            svg
-            style={{
-              width: '1.5em',
-              height: '1.5em',
-            }}
-            title="Cuba"
-          />
-        )}
-      </div>
-
-      <span className="font-medium text-sm">
-        {currentLang === 'es' ? 'EN' : 'ES'}
-      </span>
+      <ReactCountryFlag
+        countryCode={countryCode} // La bandera correcta se muestra aquí
+        svg
+        style={{
+          width: '1.75em', // Ligeramente más grande para mejor visibilidad
+          height: '1.75em',
+        }}
+        aria-label={label}
+      />
+      {/* Opcional: puedes remover el texto si prefieres solo la bandera */}
+     {/* <span className="font-medium text-sm">{label}</span>  */}
     </Button>
   );
 };
