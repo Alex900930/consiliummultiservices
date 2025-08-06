@@ -6,6 +6,7 @@ import Testimonials from "@/components/Testimonials";
 import Team from "@/components/Team";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import Commitment from "@/components/Commitment";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <About />
       <Services />
       <Testimonials />
+      <Commitment />
       <Team />
     
     </div>
