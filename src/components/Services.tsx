@@ -1,170 +1,100 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, Calculator, FileText, Users, Shield, TrendingUp, Award } from "lucide-react";
+import { Link } from 'react-router-dom';
+// ¡IMPORTANTE! Importamos el nuevo componente de Carrusel
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
+
+// Función para crear los IDs de ancla (sin cambios)
+const createAnchorId = (title) => title.toLowerCase().replace(/ /g, '-').replace(/[()]/g, '');
+
+const servicesData = [
+  {
+    title: "Presentación de Taxes",
+    description: "Maximizamos tus deducciones y aseguramos el cumplimiento fiscal.",
+    image: "/images/services/taxes.jpg",
+    anchorId: createAnchorId("TAXES")
+  },
+  {
+    title: "Servicios Contables",
+    description: "Desde bookkeeping mensual hasta reportes financieros.",
+    image: "/images/services/contabilidad.jpg",
+    anchorId: createAnchorId("SERVICIOS CONTABLES")
+  },
+  {
+    title: "Apertura de Empresas",
+    description: "Te guiamos para lanzar tu LLC o Corporación con una base sólida.",
+    image: "/images/services/apertura-empresa.jpg",
+    anchorId: createAnchorId("APERTURA DE EMPRESAS (LLC Y CORPORACIONES)")
+  },
+  {
+    title: "Seguros de Vida y Salud",
+    description: "Protege tu futuro y el de tu familia con planes personalizados.",
+    image: "/images/services/seguros.jpg",
+    anchorId: createAnchorId("SEGUROS DE VIDA Y SALUD")
+  },
+  {
+    title: "Payroll Básico",
+    description: "Gestionamos la nómina de tus empleados de manera eficiente y puntual.",
+    image: "/images/services/payroll.jpg",
+    anchorId: createAnchorId("Payroll Básico")
+  },
+  {
+    title: "Notary Public",
+    description: "Servicios de notariado confiables para tus documentos importantes.",
+    image: "/images/services/notary.jpg",
+    anchorId: createAnchorId("NOTARY PUBLIC")
+  }
+];
 
 const Services = () => {
-  const services = [
-    {
-      icon: Calculator,
-      title: "Bookkeeping Mensual",
-      description: "Mantenemos sus registros financieros organizados y actualizados mensualmente",
-      features: [
-        "Registro de ingresos y gastos",
-        "Conciliación bancaria mensual", 
-        "Conciliación de tarjetas de crédito",
-        "Clasificación de transacciones",
-        "Mantenimiento del Chart of Accounts",
-        "Reportes mensuales: P&L, Balance Sheet, Cash Flow"
-      ],
-      color: "bg-blue-500"
-    },
-    {
-      icon: FileText,
-      title: "Cuentas por Cobrar y Pagar",
-      description: "Gestión profesional de sus cuentas por cobrar y pagar",
-      features: [
-        "Facturación a clientes",
-        "Registro de pagos recibidos",
-        "Gestión de cuentas vencidas",
-        "Registro y programación de pagos",
-        "Reportes de Aging",
-        "Seguimiento de pagos pendientes"
-      ],
-      color: "bg-green-500"
-    },
-    {
-      icon: Users,
-      title: "Payroll Básico",
-      description: "Procesamiento completo de nómina para su empresa",
-      features: [
-        "Procesamiento de nómina",
-        "Emisión de paystubs",
-        "Cálculo de retenciones",
-        "Presentación de formularios 941, 940, W-2, W-3",
-        "Integración con software de nómina",
-        "Depósitos directos"
-      ],
-      color: "bg-purple-500"
-    },
-    {
-      icon: Shield,
-      title: "Presentación de Taxes",
-      description: "Presentación profesional de todos sus impuestos",
-      features: [
-        "Declaración de impuestos individuales (1040)",
-        "Declaración de negocios (1065, 1120, 1120-S)",
-        "Declaración de Sales Tax",
-        "Declaración de payroll taxes",
-        "Planificación fiscal",
-        "Representación ante IRS"
-      ],
-      color: "bg-red-500"
-    },
-    {
-      icon: TrendingUp,
-      title: "Consultoría y Asesoría",
-      description: "Asesoría estratégica para optimizar sus finanzas",
-      features: [
-        "Configuración inicial de QuickBooks/Xero",
-        "Limpieza contable",
-        "Capacitación básica",
-        "Preparación para auditorías",
-        "Análisis financiero y presupuestos",
-        "Estrategias de crecimiento"
-      ],
-      color: "bg-orange-500"
-    },
-    {
-      icon: Award,
-      title: "Servicios Premium",
-      description: "Servicios avanzados para empresas en crecimiento",
-      features: [
-        "Setup de POS",
-        "Facturación electrónica",
-        "Reportes para inversionistas/bancos",
-        "CFO Virtual",
-        "Representación ante IRS",
-        "Auditorías internas"
-      ],
-      color: "bg-indigo-500"
-    }
-  ];
-
   return (
-    <section id="servicios" className="py-20 lg:py-32 bg-gradient-to-b from-white to-gray-50">
+    // ¡LA CLAVE! Fondo oscuro y texto blanco para toda la sección
+    <section id="servicios" className="py-20 lg:py-28 bg-gradient-hero text-white">
       <div className="container mx-auto px-4">
-        {/* Header */}
+        {/* Header de la sección con colores de texto ajustados */}
         <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
-            <Calculator className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Nuestros Servicios</span>
-          </div>
-          
-          <h2 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-            Servicios contables
-            <span className="text-primary block lg:inline"> profesionales</span>
+          <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+            Áreas de Práctica
           </h2>
-          
-          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Especialistas en servicios de bookkeeping, contabilidad y asesoría para contratistas, 
-            pequeños negocios y emprendedores
+          <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+            Ofrecemos un espectro completo de servicios contables y financieros para asegurar tu éxito.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-          {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white border border-gray-200/50">
-              <CardHeader className="text-center pb-6">
-                <div className={`w-20 h-20 mx-auto mb-6 p-4 ${service.color} rounded-2xl group-hover:scale-110 transition-all duration-300 shadow-lg`}>
-                  <service.icon size={32} className="text-white" />
+        {/* --- CARRUSEL DE SERVICIOS --- */}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-6xl mx-auto"
+        >
+          <CarouselContent>
+            {servicesData.map((service, index) => (
+              // Cada item del carrusel tiene un ancho definido
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="overflow-hidden shadow-lg h-full border-gray-700 bg-gradient">
+                    <CardContent className="flex flex-col items-center justify-center p-0 h-full">
+                      <img className="h-48 w-full object-cover" src={service.image} alt={service.title} />
+                      <div className="p-6 text-center flex-grow flex flex-col">
+                        <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                        <p className="mt-3 text-base text-gray-400 flex-grow">{service.description}</p>
+                        <div className="mt-6">
+                          <Link to={`/servicios#${service.anchorId}`} className="text-sm font-semibold text-primary hover:text-primary/80">
+                            Saber Más →
+                          </Link>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
-                <CardTitle className="text-xl lg:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-                  {service.title}
-                </CardTitle>
-                <CardDescription className="text-muted-foreground text-base leading-relaxed">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start text-sm text-muted-foreground">
-                      <Check className="w-4 h-4 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <div className="mt-8 pt-6 border-t border-gray-200">
-                  <button className="w-full bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold px-6 py-3 rounded-xl shadow-golden hover:scale-105 transition-all duration-300">
-                    Solicitar Servicio
-                  </button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16 lg:mt-20">
-          <div className="bg-gradient-card rounded-2xl p-8 lg:p-12 shadow-elegant max-w-4xl mx-auto">
-            <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-              ¿No encuentra el servicio que necesita?
-            </h3>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Contáctenos para servicios personalizados. Nuestro equipo está listo para 
-              ayudarle con cualquier necesidad contable específica de su negocio.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-bold px-8 py-4 rounded-xl text-lg shadow-golden transform hover:scale-105 transition-all duration-300">
-                Consulta personalizada gratuita
-              </button>
-              <button className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300">
-                Llamar ahora
-              </button>
-            </div>
-          </div>
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden sm:flex" />
+          <CarouselNext className="hidden sm:flex" />
+        </Carousel>
+        
       </div>
     </section>
   );
