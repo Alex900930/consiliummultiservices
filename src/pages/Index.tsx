@@ -8,6 +8,7 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Commitment from "@/components/Commitment";
 import Process from "@/components/Process";
+import ClientsNationwide from "@/components/ClientsNationwide";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <Testimonials />
       <Commitment />
       <Process />
+      <ClientsNationwide />
       <Team />
     
     </div>
