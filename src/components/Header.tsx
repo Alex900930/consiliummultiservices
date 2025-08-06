@@ -1,66 +1,64 @@
 import { useState } from "react";
+// ¡IMPORTANTE! Importamos HashLink y le damos el alias "Link" para usarlo en todo el componente.
+// Ahora, cada vez que escribamos <Link>, estaremos usando el poderoso HashLink.
+import { HashLink as Link } from 'react-router-hash-link'; 
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { useTranslation } from 'react-i18next';
-import consiliumLogo from "@/assets/consilium-logo.png"; // Asegúrate de que la ruta del logo es correcta
+import consiliumLogo from "@/assets/consilium-logo.png";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-// --- DATOS DE NAVEGACIÓN ENFOCADOS EN CONTABILIDAD ---
+// Función para crear los IDs de ancla (sin cambios)
+const createAnchorId = (title) => title.toLowerCase().replace(/ /g, '-').replace(/[()]/g, '');
 
-// 1. Definimos la lista de servicios principales para el menú desplegable.
-const accountingServices = [
-  { name: "Bookkeeping Mensual", href: "#bookkeeping" },
-  { name: "Cuentas por Cobrar y Pagar", href: "#cuentas" },
-  { name: "Payroll Básico", href: "#payroll" },
-  { name: "Presentación de Taxes", href: "#taxes" },
-  { name: "Consultoría y Asesoría", href: "#consultoria" },
-  { name: "Servicios Premium", href: "#premium" }
+const servicesForMenu = [
+  { name: "TAXES", href: `/servicios#${createAnchorId("TAXES")}` },
+  { name: "SERVICIOS CONTABLES", href: `/servicios#${createAnchorId("SERVICIOS CONTABLES")}` },
+  { name: "APERTURA DE EMPRESAS (LLC Y CORPORACIONES)", href: `/servicios#${createAnchorId("APERTURA DE EMPRESAS (LLC Y CORPORACIONES)")}` },
+  { name: "SEGUROS DE VIDA Y SALUD", href: `/servicios#${createAnchorId("SEGUROS DE VIDA Y SALUD")}` },
+  { name: "NOTARY PUBLIC", href: `/servicios#${createAnchorId("NOTARY PUBLIC")}` }
 ];
 
-// 2. Definimos los elementos principales del menú.
 const navItems = [
-  { name: "Inicio", href: "#inicio" },
-  { 
-    name: "Servicios", // Un nombre más corto y directo
-    href: "#servicios",
-    submenu: accountingServices // Asignamos los servicios definidos arriba
-  },
-  { name: "Nosotros", href: "#nosotros" },
-  { name: "Contacto", href: "#contacto" },
+  { name: "Inicio", href: "/" },
+  { name: "Servicios", href: "/servicios", submenu: servicesForMenu },
+  { name: "Nosotros", href: "/nosotros" },
+  { name: "Contacto", href: "/contacto" },
 ];
-
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t } = useTranslation(); // Mantenemos t para futuros usos o si los nombres cambian
+  const { t } = useTranslation();
+
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <a href="#inicio" className="flex-shrink-0">
+            <Link to="/" className="flex-shrink-0">
               <img src={consiliumLogo} alt="Consilium Multiservices LLC Logo" className="h-14 sm:h-16 w-auto" />
-            </a>
+            </Link>
 
-            {/* ====== NAVEGACIÓN DE ESCRITORIO ====== */}
+            {/* ====== NAVEGACIÓN DE ESCRITORIO CORREGIDA ====== */}
             <nav className="hidden lg:flex items-center space-x-6">
               {navItems.map((item) => (
+                // LA CLAVE: 'relative group' en el contenedor principal del link
                 <div key={item.name} className="relative group">
-                  <a href={item.href} className="text-foreground hover:text-primary transition-colors duration-200 font-medium flex items-center space-x-1">
+                  <Link to={item.href} className="text-foreground hover:text-primary transition-colors duration-200 font-medium flex items-center space-x-1 py-2">
                     <span>{t(item.name)}</span>
-                    {item.submenu && <ChevronDown className="w-4 h-4" />}
-                  </a>
+                    {item.submenu && <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />}
+                  </Link>
                   
-                  {/* El menú desplegable ahora usa la lista de servicios de contabilidad */}
                   {item.submenu && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    // ¡CLASES COMPLETAS Y CORRECTAS AQUÍ!
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-80 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
                       <div className="py-2">
                         {item.submenu.map((subItem) => (
-                          <a key={subItem.name} href={subItem.href} className="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">
+                          <Link key={subItem.name} to={subItem.href} smooth className="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors duration-200">
                             {t(subItem.name)}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -68,21 +66,21 @@ const Header = () => {
                 </div>
               ))}
             </nav>
+
             <div className="hidden lg:flex items-center space-x-4">
-              <a href="tel:TU-NUMERO-DE-TELEFONO" className="flex items-center space-x-2 text-primary font-semibold hover:text-primary/80">
+              <a href="tel:18064213785" className="flex items-center space-x-2 text-primary font-semibold hover:text-primary/80">
                 <Phone size={20} />
                 <span>Llámenos</span>
               </a>
               <LanguageSwitcher />
               <Button asChild className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold px-6 py-2 shadow-golden">
-                <a href="#contacto">¡Agende su cita hoy!</a>
+                <Link to="/contacto">¡Agende su cita hoy!</Link>
               </Button>
             </div>
             
-            {/* ====== CONTROLES MÓVILES ====== */}
             <div className="lg:hidden flex items-center space-x-3 sm:space-x-4">
               <LanguageSwitcher />
-              <a href="tel:TU-NUMERO-DE-TELEFONO" className="text-foreground hover:text-primary">
+              <a href="tel:18064213785" className="text-foreground hover:text-primary">
                 <Phone size={24} />
               </a>
               <button onClick={() => setIsMenuOpen(true)} className="text-foreground">
@@ -93,34 +91,27 @@ const Header = () => {
         </div>
       </header>
 
-      {/* ====== PANEL DE MENÚ MÓVIL (OVERLAY) ====== */}
+      {/* PANEL DE MENÚ MÓVIL (SIN CAMBIOS, PERO USARÁ <Link> QUE AHORA ES HashLink) */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-background z-50 flex flex-col p-4">
           <div className="flex items-center justify-between pb-4 border-b border-border">
-            <a href="#inicio" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/" onClick={closeMenu}>
               <img src={consiliumLogo} alt="Consilium Multiservices LLC Logo" className="h-14 w-auto" />
-            </a>
-            <button onClick={() => setIsMenuOpen(false)} className="text-foreground">
+            </Link>
+            <button onClick={closeMenu} className="text-foreground">
               <X size={30} />
             </button>
           </div>
-
           <nav className="flex-grow flex flex-col items-center justify-center space-y-6">
             {navItems.map((item) => (
-              <a 
-                key={item.name} 
-                href={item.href} 
-                onClick={() => setIsMenuOpen(false)}
-                className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
-              >
+              <Link key={item.name} to={item.href} onClick={closeMenu} className="text-2xl font-medium text-foreground hover:text-primary transition-colors">
                 {t(item.name)}
-              </a>
+              </Link>
             ))}
           </nav>
-
           <div className="pt-6 border-t border-border">
-            <Button asChild size="lg" className="w-full bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold shadow-golden">
-              <a href="#contacto" onClick={() => setIsMenuOpen(false)}>¡Agende su cita hoy!</a>
+            <Button asChild size="lg" className="w-full bg-gradient-primary ...">
+              <Link to="/contacto" onClick={closeMenu}>¡Agende su cita hoy!</Link>
             </Button>
           </div>
         </div>
