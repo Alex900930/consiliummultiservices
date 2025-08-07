@@ -53,7 +53,7 @@ const Services = () => {
         {/* Header de la sección con colores de texto ajustados */}
         <div className="text-center mb-16 lg:mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
-            Áreas de Práctica
+          Nos especializamos
           </h2>
           <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
             Ofrecemos un espectro completo de servicios contables y financieros para asegurar tu éxito.
