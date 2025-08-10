@@ -5,22 +5,22 @@ import { Button } from '@/components/ui/button';
 // Cambiamos 'bio' por 'quote' y añadimos un 'phone' para el CTA
 const teamData = [
   {
-    name: 'Yainier Consillium',
-    role: 'CEO & Asesor Financiero Principal',
+    name: 'YAINIER SANCHEZ',
+    role: 'CO - CEO Consilium Tax & Accounting',
     image: '/team/yainier-consilium.jpg',
     quote: '"Tu éxito financiero es nuestra meta. Siempre estamos disponibles para guiarte."',
     phone: '18064213785' // Reemplaza con el número de teléfono real
   },
   {
-    name: 'Carolina Consilium',
-    role: 'Comercial Jefe',
+    name: 'CAROLINA GONZALEZ',
+    role: 'CO - CEO Consilium Tax & Accounting',
     image: '/team/ana-consilium.jpg',
     quote: '"Transformamos la complejidad de los números en claridad y tranquilidad para ti."',
     phone: '18064213785'
   },
   {
-    name: 'Andre Consilium', // Puedes cambiar este nombre por el real
-    role: 'Gerente de Relaciones con el Cliente',
+    name: 'KARINA GÓMEZ', // Puedes cambiar este nombre por el real
+    role: 'Asistente Administrativo',
     image: '/team/jennifer-martinez.png', // Asegúrate que el nombre y extensión (.jpg o .png) sean correctos
     quote: '"Mi compromiso es que te sientas escuchado y apoyado en cada paso del proceso."',
     phone: '18064213785'
