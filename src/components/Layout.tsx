@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Layout = () => {
   return (
@@ -13,6 +14,7 @@ const Layout = () => {
       </main>
       <CTA /> {/* Opcional: si quieres el CTA en todas las páginas */}
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

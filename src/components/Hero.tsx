@@ -47,12 +47,12 @@ const Hero = () => {
                 Organizamos sus <span className="text-primary">finanzas</span>
               </h1>
               
-              <p 
+              {/* <p 
                 className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto md:mx-0"
                 style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.6)' }}
               >
                 — <span className="font-semibold">Yainier Consillium</span>, CEO y Contador Principal
-              </p>
+              </p> */}
 
               <blockquote 
                 className="text-lg text-gray-200 italic border-l-4 border-primary pl-6 max-w-2xl mx-auto md:mx-0 hidden md:block"
