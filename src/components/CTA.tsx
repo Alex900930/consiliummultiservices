@@ -15,7 +15,7 @@ const CTA = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center space-y-8 max-w-4xl mx-auto">
           <h2 className="text-4xl lg:text-6xl font-bold leading-tight">
-            ¿Listo para organizar sus finanzas? 
+          Si no controlas tus finanzas, ellas te controlan a ti. 
             <span className="text-primary block">¡Agende su consulta gratuita hoy!</span>
           </h2>
           
