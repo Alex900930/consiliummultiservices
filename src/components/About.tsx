@@ -54,14 +54,7 @@ const About = () => {
                 Fundada sobre los pilares de la **confianza, la claridad y el compromiso personal**, nuestra misión es transformar la contabilidad de una obligación estresante a una herramienta poderosa para el crecimiento.
               </p>
             </div>
-            
-            <cite 
-              className="block text-xl font-semibold text-primary not-italic pt-4"
-              style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.5)' }}
-            >
-              — Yainier Consilium, Fundador
-            </cite>
-            
+                        
             <div className="pt-4">
                 <Button asChild size="lg" className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold shadow-golden">
                     <Link to="/servicios">Conozca Nuestros Servicios</Link>
