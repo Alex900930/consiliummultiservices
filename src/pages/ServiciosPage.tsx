@@ -82,7 +82,7 @@ const ServiciosPage = () => {
           <div className="flex items-center justify-end text-right min-h-[90vh]">
             <div className="max-w-96 backdrop-blur-sm p-12 rounded-lg shadow-2xl">
               <h1 className="text-5xl font-bold leading-tight text-gray-900">
-                Soluciones Profesionales a su Medida
+                Soluciones Profesionales a tu Medida
               </h1>
               {/* <p className="mt-6 text-lg text-gray-700">
                 Explore nuestra gama completa de servicios diseñados para proteger y hacer crecer su patrimonio con la máxima eficiencia y profesionalismo.
