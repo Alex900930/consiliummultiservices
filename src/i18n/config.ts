@@ -219,6 +219,77 @@ const resources = {
       'cta-section.socialProof.services': '500+ Servicios exitosos',
       'cta-section.socialProof.response': 'Respuesta en 24hrs',
 
+      //serviciospage
+
+      'services-page.hero.title': 'Soluciones Profesionales a su Medida',
+      'services-page.hero.subtitle': 'Explore nuestra gama de servicios para proteger y hacer crecer su patrimonio.',
+      'services-page.hero.buttonCall': 'Llámenos',
+      'services-page.hero.buttonWhatsapp': 'WhatsApp',
+
+      // Lista de Servicios
+      // Servicio 0
+      'services-page.list.0.title': 'Bookkeeping y Contabilidad Diaria',
+      'services-page.list.0.cta': 'Solicita información',
+      'services-page.list.0.content.0': 'Registro de ventas, compras, ingresos y gastos.',
+      'services-page.list.0.content.1': 'Conciliaciones bancarias y de tarjetas.',
+      'services-page.list.0.content.2': 'Clasificación contable precisa de cada transacción.',
+      'services-page.list.0.content.3': 'Gestión de cuentas por cobrar y pagar.',
+      // Servicio 1
+      'services-page.list.1.title': 'Estados Financieros Profesionales',
+      'services-page.list.1.cta': 'Obtén tus reportes',
+      'services-page.list.1.content.0': 'Balance General.',
+      'services-page.list.1.content.1': 'Estado de Resultados.',
+      'services-page.list.1.content.2': 'Flujo de Efectivo.',
+      'services-page.list.1.content.3': 'Análisis y reportes personalizados.',
+      // Servicio 2
+      'services-page.list.2.title': 'Payroll (Nómina)',
+      'services-page.list.2.cta': 'Solicita información',
+      'services-page.list.2.content.0': 'Cálculo y procesamiento de nómina.',
+      'services-page.list.2.content.1': 'Impuestos y formularios de nómina (941, W-2, 1099).',
+      'services-page.list.2.content.2': 'Administración de retenciones y beneficios.',
+      // Servicio 3
+      'services-page.list.3.title': 'Impuestos (Taxes)',
+      'services-page.list.3.cta': 'Solicita información',
+      'services-page.list.3.content.0': 'Impuestos de negocios e individuales.',
+      'services-page.list.3.content.1': 'Planificación fiscal estratégica.',
+      'services-page.list.3.content.2': 'Impuestos de ventas (Sales Tax).',
+      'services-page.list.3.content.3': 'Correcciones y enmiendas (Amended Returns).',
+      // Servicio 4
+      'services-page.list.4.title': 'Consultoría Financiera y Empresarial',
+      'services-page.list.4.cta': 'Agenda una consulta',
+      'services-page.list.4.content.0': 'Asesoría en estructura legal (LLC, S-Corp, C-Corp).',
+      'services-page.list.4.content.1': 'Planificación de flujo de caja.',
+      'services-page.list.4.content.2': 'Presupuestos y proyecciones.',
+      'services-page.list.4.content.3': 'Reportes para préstamos y financiamiento.',
+      // Servicio 5
+      'services-page.list.5.title': 'Servicios Especializados',
+      'services-page.list.5.cta': 'Cuéntanos tu necesidad',
+      'services-page.list.5.content.0': 'Contabilidad para contratistas y construcción.',
+      'services-page.list.5.content.1': 'E-commerce (Amazon, Shopify, eBay).',
+      'services-page.list.5.content.2': 'Operaciones internacionales y multimoneda.',
+      'services-page.list.5.content.3': 'Preparación y acompañamiento en auditorías.',
+      // Servicio 6
+      'services-page.list.6.title': 'APERTURA DE EMPRESAS (LLC Y CORPORACIONES)',
+      'services-page.list.6.cta': 'Solicita información',
+      'services-page.list.6.content.0': 'Te guiamos en cada etapa del proceso legal y administrativo para abrir tu empresa.',
+      'services-page.list.6.content.1': 'Gestionamos el EIN, redactamos documentos esenciales y todo lo necesario para que inicies con bases sólidas.',
+      'services-page.list.6.content.2': 'Nuestro compromiso es apoyar a emprendedores a abrir su cuenta bancaria comercial sin complicaciones.',
+      // Servicio 7
+      'services-page.list.7.title': 'SEGUROS DE VIDA Y SALUD',
+      'services-page.list.7.cta': 'Solicita información',
+      'services-page.list.7.content.0': 'Salud: Cobertura médica esencial y planes complementarios.',
+      'services-page.list.7.content.1': 'Vida: Asegura el bienestar de tus seres queridos en caso de imprevistos.',
+      'services-page.list.7.content.2': 'Vehículos y Propiedades: Cobertura confiable para accidentes, daños y protección integral para tu hogar.',
+      'services-page.list.7.content.3': 'Estamos contigo desde la selección del seguro hasta la gestión de reclamaciones.',
+      // Servicio 8
+      'services-page.list.8.title': 'NOTARY PUBLIC',
+      'services-page.list.8.cta': 'Solicita información',
+      'services-page.list.8.content.0': 'Autenticación y certificación de documentos legales.',
+      'services-page.list.8.content.1': 'Firma y validación de contratos, declaraciones juradas y acuerdos.',
+      'services-page.list.8.content.2': 'Realización de ceremonias de matrimonio y formalización de divorcios simples.',
+      'services-page.list.8.content.3': 'Notarización de poderes, testamentos y más, garantizando cumplimiento legal.',
+
+
       // And more translations...
 
 
@@ -440,6 +511,77 @@ const resources = {
       'cta-section.socialProof.rating': '4.9/5 Rating',
       'cta-section.socialProof.services': '500+ Successful Services',
       'cta-section.socialProof.response': 'Response within 24hrs',
+
+      //servicespage
+
+      'services-page.hero.title': 'Professional Solutions Tailored to You',
+      'services-page.hero.subtitle': 'Explore our range of services to protect and grow your assets.',
+      'services-page.hero.buttonCall': 'Call Us',
+      'services-page.hero.buttonWhatsapp': 'WhatsApp',
+
+      // Services List
+      // Service 0
+      'services-page.list.0.title': 'Bookkeeping and Daily Accounting',
+      'services-page.list.0.cta': 'Request information',
+      'services-page.list.0.content.0': 'Recording of sales, purchases, income, and expenses.',
+      'services-page.list.0.content.1': 'Bank and card reconciliations.',
+      'services-page.list.0.content.2': 'Accurate accounting classification of each transaction.',
+      'services-page.list.0.content.3': 'Accounts receivable and payable management.',
+      // Service 1
+      'services-page.list.1.title': 'Professional Financial Statements',
+      'services-page.list.1.cta': 'Get your reports',
+      'services-page.list.1.content.0': 'Balance Sheet.',
+      'services-page.list.1.content.1': 'Income Statement.',
+      'services-page.list.1.content.2': 'Cash Flow Statement.',
+      'services-page.list.1.content.3': 'Custom analysis and reports.',
+      // Service 2
+      'services-page.list.2.title': 'Payroll',
+      'services-page.list.2.cta': 'Request information',
+      'services-page.list.2.content.0': 'Payroll calculation and processing.',
+      'services-page.list.2.content.1': 'Payroll taxes and forms (941, W-2, 1099).',
+      'services-page.list.2.content.2': 'Withholding and benefits administration.',
+      // Service 3
+      'services-page.list.3.title': 'Taxes',
+      'services-page.list.3.cta': 'Request information',
+      'services-page.list.3.content.0': 'Business and individual taxes.',
+      'services-page.list.3.content.1': 'Strategic tax planning.',
+      'services-page.list.3.content.2': 'Sales Tax.',
+      'services-page.list.3.content.3': 'Corrections and Amended Returns.',
+      // Service 4
+      'services-page.list.4.title': 'Financial and Business Consulting',
+      'services-page.list.4.cta': 'Schedule a consultation',
+      'services-page.list.4.content.0': 'Advice on legal structure (LLC, S-Corp, C-Corp).',
+      'services-page.list.4.content.1': 'Cash flow planning.',
+      'services-page.list.4.content.2': 'Budgets and projections.',
+      'services-page.list.4.content.3': 'Reports for loans and financing.',
+      // Service 5
+      'services-page.list.5.title': 'Specialized Services',
+      'services-page.list.5.cta': 'Tell us your need',
+      'services-page.list.5.content.0': 'Accounting for contractors and construction.',
+      'services-page.list.5.content.1': 'E-commerce (Amazon, Shopify, eBay).',
+      'services-page.list.5.content.2': 'International and multi-currency operations.',
+      'services-page.list.5.content.3': 'Audit preparation and support.',
+      // Service 6
+      'services-page.list.6.title': 'BUSINESS FORMATION (LLC & CORPORATIONS)',
+      'services-page.list.6.cta': 'Request information',
+      'services-page.list.6.content.0': 'We guide you through every stage of the legal and administrative process to open your company.',
+      'services-page.list.6.content.1': 'We manage the EIN, draft essential documents, and everything necessary for you to start on a solid foundation.',
+      'services-page.list.6.content.2': 'Our commitment is to help entrepreneurs open their business bank account without complications.',
+      // Service 7
+      'services-page.list.7.title': 'LIFE AND HEALTH INSURANCE',
+      'services-page.list.7.cta': 'Request information',
+      'services-page.list.7.content.0': 'Health: Essential medical coverage and supplementary plans.',
+      'services-page.list.7.content.1': 'Life: Ensure the well-being of your loved ones in case of unforeseen events.',
+      'services-page.list.7.content.2': 'Vehicles and Properties: Reliable coverage for accidents, damages, and comprehensive protection for your home.',
+      'services-page.list.7.content.3': 'We are with you from insurance selection to claims management.',
+      // Service 8
+      'services-page.list.8.title': 'NOTARY PUBLIC',
+      'services-page.list.8.cta': 'Request information',
+      'services-page.list.8.content.0': 'Authentication and certification of legal documents.',
+      'services-page.list.8.content.1': 'Signing and validation of contracts, affidavits, and agreements.',
+      'services-page.list.8.content.2': 'Performing marriage ceremonies and formalizing simple divorces.',
+      'services-page.list.8.content.3': 'Notarization of powers of attorney, wills, and more, ensuring legal compliance.',
+
 
       // And more translations...
     }
