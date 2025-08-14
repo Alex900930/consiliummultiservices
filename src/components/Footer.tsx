@@ -30,7 +30,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1 space-y-6">
             <div className="flex items-center space-x-3">
-              <img src={consiliumLogo} alt="Consilium Multiservices LLC" className="h-12 w-12" />
+              <img src={consiliumLogo} alt="Consilium Multiservices LLC" className="h-12 w-20" />
               <div className="text-lg font-bold">
                 CONSILIUM<br />MULTISERVICES LLC
               </div>
