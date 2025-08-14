@@ -187,7 +187,41 @@ const resources = {
       'clients.subtitle': 'No importa en qué estado se encuentre, nuestra firma está equipada con la tecnología y la experiencia para ofrecerle servicios contables y financieros de primer nivel de forma remota, segura y eficiente.',
       'clients.cta': 'Programe una Consulta Virtual',
 
+
+      //team
+      'team.member.0.name': 'YAINIER SANCHEZ',
+      'team.member.0.role': 'CO - CEO Consilium Tax & Accounting',
+      'team.member.0.quote': 'Especialista en preparación de impuestos y servicios contables para pequeñas empresas. Su enfoque está en ayudar a emprendedores y dueños de negocios a mantener sus finanzas en orden, cumplir con sus obligaciones fiscales y optimizar sus recursos. Con compromiso y precisión, ofrece soluciones contables adaptadas a las necesidades de cada cliente.',
+      
+      'team.member.1.name': 'CAROLINA GONZALEZ',
+      'team.member.1.role': 'CO - CEO Consilium Tax & Accounting',
+      'team.member.1.quote': 'Experta en la preparación de formularios migratorios con amplia experiencia ayudando a la comunidad en procesos como: Asilo, permisos de trabajo, peticiones familiares y más. Además, cuenta con licencia como agente de seguros de vida y salud, brindando asesoría confiable y personalizada para proteger a las familias en cada etapa de su vida.',
+
+      'team.member.2.name': 'KARINA GÓMEZ',
+      'team.member.2.role': 'Asistente Administrativo',
+      'team.member.2.quote': 'Mano derecha de nuestro equipo. Con amplia experiencia en atención al cliente y tareas administrativas. Karina se encarga de coordinar citas, dar seguimiento a los casos y garantizar una atención amable, eficiente y personalizada. Es un pilar clave en la conexión directa con nuestra comunidad.',
+      
+      //cta
+
+      'cta-section.title.line1': 'Si no controlas tus finanzas, ellas te controlan a ti.',
+      'cta-section.title.line2': '¡Agende su consulta gratuita hoy!',
+      'cta-section.subtitle': 'Nuestro equipo de contadores profesionales está listo para ayudarle a mantener sus finanzas claras y sus impuestos al día.',
+      'cta-section.feature1.title': 'Evaluación completa',
+      'cta-section.feature1.description': 'De sus necesidades contables',
+      'cta-section.feature2.title': 'Sin compromisos',
+      'cta-section.feature2.description': 'Evaluación honesta',
+      'cta-section.feature3.title': 'Equipo certificado',
+      'cta-section.feature3.description': '15+ años de experiencia',
+      'cta-section.button.appointment': '¡Agende su cita hoy!',
+      'cta-section.button.call': 'Llamar ahora: +1 786 599-0462',
+      'cta-section.socialProof.join': 'Únase a más de 3,800+ clientes que ya confían en Consilium Multiservices',
+      'cta-section.socialProof.rating': '4.9/5 Rating',
+      'cta-section.socialProof.services': '500+ Servicios exitosos',
+      'cta-section.socialProof.response': 'Respuesta en 24hrs',
+
       // And more translations...
+
+
     }
   },
   en: {
@@ -374,6 +408,38 @@ const resources = {
       'clients.title': 'We Provide Services Nationwide',
       'clients.subtitle': 'No matter which state you are in, our firm is equipped with the technology and experience to offer you first-class accounting and financial services remotely, safely and efficiently.',
       'clients.cta': 'Schedule a Virtual Consultation',
+
+      //team
+
+      'team.member.0.name': 'YAINIER SANCHEZ',
+      'team.member.0.role': 'CO - CEO Consilium Tax & Accounting',
+      'team.member.0.quote': 'Specialist in tax preparation and accounting services for small businesses. His focus is on helping entrepreneurs and business owners keep their finances in order, comply with their tax obligations, and optimize their resources. With commitment and precision, he offers accounting solutions tailored to the needs of each client.',
+
+      'team.member.1.name': 'CAROLINA GONZALEZ',
+      'team.member.1.role': 'CO - CEO Consilium Tax & Accounting',
+      'team.member.1.quote': 'Expert in the preparation of immigration forms with extensive experience helping the community in processes such as: Asylum, work permits, family petitions, and more. Additionally, she is licensed as a life and health insurance agent, providing reliable and personalized advice to protect families at every stage of their lives.',
+
+      'team.member.2.name': 'KARINA GÓMEZ',
+      'team.member.2.role': 'Administrative Assistant',
+      'team.member.2.quote': 'The right hand of our team. With extensive experience in customer service and administrative tasks. Karina is in charge of coordinating appointments, following up on cases, and ensuring friendly, efficient, and personalized attention. She is a key pillar in the direct connection with our community.',
+
+      //cta
+
+      'cta-section.title.line1': "If you don't control your finances, they will control you.",
+      'cta-section.title.line2': 'Schedule your free consultation today!',
+      'cta-section.subtitle': 'Our team of professional accountants is ready to help you keep your finances clear and your taxes up to date.',
+      'cta-section.feature1.title': 'Complete Assessment',
+      'cta-section.feature1.description': 'Of your accounting needs',
+      'cta-section.feature2.title': 'No Commitment',
+      'cta-section.feature2.description': 'Honest evaluation',
+      'cta-section.feature3.title': 'Certified Team',
+      'cta-section.feature3.description': '15+ years of experience',
+      'cta-section.button.appointment': 'Schedule your appointment today!',
+      'cta-section.button.call': 'Call now: +1 786 599-0462',
+      'cta-section.socialProof.join': 'Join over 3,800+ clients who already trust Consilium Multiservices',
+      'cta-section.socialProof.rating': '4.9/5 Rating',
+      'cta-section.socialProof.services': '500+ Successful Services',
+      'cta-section.socialProof.response': 'Response within 24hrs',
 
       // And more translations...
     }
