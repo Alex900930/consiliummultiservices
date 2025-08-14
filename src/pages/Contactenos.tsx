@@ -11,7 +11,7 @@ const Contactenos = () => {
       {/* ====== 1. HERO SECTION - SOLO IMAGEN (Sin cambios) ====== */}
       <section className="h-[50vh] lg:h-[90vh]">
         <img
-          src="/yainie-consiliumSERVICES.png"
+          src="/yainie-consiliumContactos.png"
           alt="Contacto con Consilium Multiservices"
           className="w-full h-full object-cover object-center"
         />
