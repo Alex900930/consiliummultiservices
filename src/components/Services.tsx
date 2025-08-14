@@ -2,69 +2,70 @@ import { Link } from 'react-router-dom';
 // ¡IMPORTANTE! Importamos el nuevo componente de Carrusel
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from 'react-i18next';
 
 // Función para crear los IDs de ancla (sin cambios)
 const createAnchorId = (title) => title.toLowerCase().replace(/ /g, '-').replace(/[()]/g, '');
 
-const servicesData = [
-  {
-    title: "Presentación de Taxes",
-    description: "Maximizamos tus deducciones y aseguramos el cumplimiento fiscal.",
-    image: "/images/services/taxes.jpg",
-    anchorId: createAnchorId("TAXES")
-  },
-  {
-    title: "Servicios Contables",
-    description: "Desde bookkeeping mensual hasta reportes financieros.",
-    image: "/images/services/contabilidad.jpg",
-    anchorId: createAnchorId("SERVICIOS CONTABLES")
-  },
-  {
-    title: "Apertura de Empresas",
-    description: "Te guiamos para lanzar tu LLC o Corporación con una base sólida.",
-    image: "/images/services/apertura-empresa.jpg",
-    anchorId: createAnchorId("APERTURA DE EMPRESAS (LLC Y CORPORACIONES)")
-  },
-  {
-    title: "Seguros de Vida y Salud",
-    description: "Protege tu futuro y el de tu familia con planes personalizados.",
-    image: "/images/services/seguros.jpg",
-    anchorId: createAnchorId("SEGUROS DE VIDA Y SALUD")
-  },
-  {
-    title: "Payroll Básico",
-    description: "Gestionamos la nómina de tus empleados de manera eficiente y puntual.",
-    image: "/images/services/payroll.jpg",
-    anchorId: createAnchorId("Payroll Básico")
-  },
-  {
-    title: "Notary Public",
-    description: "Servicios de notariado confiables para tus documentos importantes.",
-    image: "/images/services/notary.jpg",
-    anchorId: createAnchorId("NOTARY PUBLIC")
-  },
-  {
-    title: "Estados Financieros Profesionales",
-    description: "Análisis y preparación de estados financieros para una toma de decisiones informada.",
-    image: "/images/services/estados-financieros.jpg", // Reemplaza con la ruta de tu imagen
-    anchorId: createAnchorId("ESTADOS FINANCIEROS PROFESIONALES")
-  },
-  {
-    title: "Consultoría Financiera y Empresarial",
-    description: "Asesoramiento estratégico para optimizar tus finanzas y hacer crecer tu negocio.",
-    image: "/images/services/consultoria.jpg", // Reemplaza con la ruta de tu imagen
-    anchorId: createAnchorId("CONSULTORIA FINANCIERA Y EMPRESARIAL")
-  },
-  {
-    title: "Servicios Especializados",
-    description: "Soluciones adaptadas a tu industria.",
-    image: "/images/services/especializados.jpg", // Reemplaza con la ruta de tu imagen
-    anchorId: createAnchorId("SERVICIOS ESPECIALIZADOS")
-  }
-];
-
-
 const Services = () => {
+  const { t } = useTranslation();
+
+  const servicesData = [
+    {
+      title: t('services.taxPreparation'),
+      description: t('services.taxDescription'),
+      image: "/images/services/taxes.jpg",
+      anchorId: createAnchorId("TAXES")
+    },
+    {
+      title: t('services.accountingServices'),
+      description: t('services.accountingDescription'),
+      image: "/images/services/contabilidad.jpg",
+      anchorId: createAnchorId("SERVICIOS CONTABLES")
+    },
+    {
+      title: t('services.businessFormation'),
+      description: t('services.businessDescription'),
+      image: "/images/services/apertura-empresa.jpg",
+      anchorId: createAnchorId("APERTURA DE EMPRESAS (LLC Y CORPORACIONES)")
+    },
+    {
+      title: t('services.insurance'),
+      description: t('services.insuranceDescription'),
+      image: "/images/services/seguros.jpg",
+      anchorId: createAnchorId("SEGUROS DE VIDA Y SALUD")
+    },
+    {
+      title: t('services.payroll'),
+      description: t('services.payrollDescription'),
+      image: "/images/services/payroll.jpg",
+      anchorId: createAnchorId("Payroll Básico")
+    },
+    {
+      title: t('services.notary'),
+      description: t('services.notaryDescription'),
+      image: "/images/services/notary.jpg",
+      anchorId: createAnchorId("NOTARY PUBLIC")
+    },
+    {
+      title: t('services.financialStatements'),
+      description: t('services.financialDescription'),
+      image: "/images/services/estados-financieros.jpg", // Reemplaza con la ruta de tu imagen
+      anchorId: createAnchorId("ESTADOS FINANCIEROS PROFESIONALES")
+    },
+    {
+      title: t('services.consulting'),
+      description: t('services.consultingDescription'),
+      image: "/images/services/consultoria.jpg", // Reemplaza con la ruta de tu imagen
+      anchorId: createAnchorId("CONSULTORIA FINANCIERA Y EMPRESARIAL")
+    },
+    {
+      title: t('services.specialized'),
+      description: t('services.specializedDescription'),
+      image: "/images/services/especializados.jpg", // Reemplaza con la ruta de tu imagen
+      anchorId: createAnchorId("SERVICIOS ESPECIALIZADOS")
+    }
+  ];
   return (
     // ¡LA CLAVE! Fondo oscuro y texto blanco para toda la sección
     <section id="servicios" className="py-20 lg:py-28 bg-gradient-hero text-white">
@@ -72,10 +73,10 @@ const Services = () => {
         {/* Header de la sección con colores de texto ajustados */}
         <div className="text-center mb-16 lg:mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
-          Nos especializamos
+          {t('services.specialize')}
           </h2>
           <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
-            Ofrecemos un espectro completo de servicios contables y financieros para asegurar tu éxito.
+            {t('services.description')}
           </p>
         </div>
 
@@ -100,7 +101,7 @@ const Services = () => {
                         <p className="mt-3 text-base text-gray-400 flex-grow">{service.description}</p>
                         <div className="mt-6">
                           <Link to={`/servicios#${service.anchorId}`} className="text-sm font-semibold text-primary hover:text-primary/80">
-                            Saber Más →
+                            {t('services.knowMore')}
                           </Link>
                         </div>
                       </div>

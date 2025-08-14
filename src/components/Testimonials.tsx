@@ -1,6 +1,7 @@
 import { Star, Quote } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from 'react-i18next';
 
 // Datos de testimonios con un formato más completo
 const testimonialsData = [
@@ -31,6 +32,8 @@ const testimonialsData = [
 ];
 
 const Testimonials = () => {
+  const { t } = useTranslation();
+  
   return (
     // ¡LA CLAVE! Contenedor relativo para superponer contenido sobre el fondo
     <section id="testimonios" className="relative py-20 lg:py-28">
@@ -52,10 +55,10 @@ const Testimonials = () => {
         {/* Header de la sección */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
-            Lo que dicen nuestros clientes
+            {t('testimonials.title')}
           </h2>
           <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
-            La confianza y el éxito de quienes trabajan con nosotros es nuestra mayor recompensa.
+            {t('testimonials.subtitle')}
           </p>
         </div>
 

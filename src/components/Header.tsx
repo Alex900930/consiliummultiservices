@@ -13,18 +13,18 @@ import { openWhatsAppForAppointment } from '@/lib/whatsapp-utils';
 const createAnchorId = (title) => title.toLowerCase().replace(/ /g, '-').replace(/[()]/g, '');
 
 const servicesForMenu = [
-  { name: "TAXES", href: `/servicios#${createAnchorId("TAXES")}` },
-  { name: "SERVICIOS CONTABLES", href: `/servicios#${createAnchorId("SERVICIOS CONTABLES")}` },
-  { name: "APERTURA DE EMPRESAS (LLC Y CORPORACIONES)", href: `/servicios#${createAnchorId("APERTURA DE EMPRESAS (LLC Y CORPORACIONES)")}` },
-  { name: "SEGUROS DE VIDA Y SALUD", href: `/servicios#${createAnchorId("SEGUROS DE VIDA Y SALUD")}` },
-  { name: "NOTARY PUBLIC", href: `/servicios#${createAnchorId("NOTARY PUBLIC")}` }
+  { name: "nav.services.taxes", href: `/servicios#${createAnchorId("TAXES")}` },
+  { name: "nav.services.accounting", href: `/servicios#${createAnchorId("SERVICIOS CONTABLES")}` },
+  { name: "nav.services.business", href: `/servicios#${createAnchorId("APERTURA DE EMPRESAS (LLC Y CORPORACIONES)")}` },
+  { name: "nav.services.insurance", href: `/servicios#${createAnchorId("SEGUROS DE VIDA Y SALUD")}` },
+  { name: "nav.services.notary", href: `/servicios#${createAnchorId("NOTARY PUBLIC")}` }
 ];
 
 const navItems = [
-  { name: "Inicio", href: "/" },
-  { name: "Servicios", href: "/servicios", submenu: servicesForMenu },
-/*   { name: "Nosotros", href: "/nosotros" }, */
-  { name: "Contacto", href: "/contacto" },
+  { name: "nav.inicio", href: "/" },
+  { name: "nav.servicios", href: "/servicios", submenu: servicesForMenu },
+/*   { name: "nav.nosotros", href: "/nosotros" }, */
+  { name: "nav.contacto", href: "/contacto" },
 ];
 
 const Header = () => {
@@ -71,14 +71,14 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-4">
               <a href="tel:18064213785" className="flex items-center space-x-2 text-primary font-semibold hover:text-primary/80">
                 <Phone size={20} />
-                <span>Llámenos</span>
+                <span>{t('nav.callUs')}</span>
               </a>
               <LanguageSwitcher />
               <Button 
                 className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold px-6 py-2 shadow-golden"
                 onClick={openWhatsAppForAppointment}
               >
-                ¡Agende su cita hoy!
+                {t('nav.scheduleAppointment')}
               </Button>
             </div>
             
@@ -122,7 +122,7 @@ const Header = () => {
                 closeMenu();
               }}
             >
-              ¡Agende su cita hoy!
+              {t('nav.scheduleAppointment')}
             </Button>
           </div>
         </div>

@@ -1,44 +1,47 @@
 import { Shield, Clock, MessageSquare, GitBranch, Target, Eye } from 'lucide-react';
-
-// --- DATOS PARA MISIÓN Y VISIÓN ---
-const missionVisionData = [
-  {
-    icon: Target,
-    title: "Nuestra Misión",
-    description: "En Consilium Multiservices LLC, nos dedicamos a proveer servicios integrales de calidad, con el objetivo de facilitar la vida y el éxito de nuestros clientes en todo Estados Unidos. Ofrecemos asesoría experta y soluciones individuales; asegurando un proceso eficiente, transparente y accesible, que cumpla con las necesidades y expectativas en un entorno dinámico y multicultural."
-  },
-  {
-    icon: Eye,
-    title: "Nuestra Visión",
-    description: "Ser una empresa de referencia en todo el país, reconocida por su excelencia y compromiso en ofrecer soluciones completas y confiables en inmigración, seguros, impuestos y notaría. Aspiramos a ser el socio estratégico de nuestros clientes en su camino hacia la estabilidad, el crecimiento y la integración plena en la sociedad, contribuyendo al bienestar de las comunidades que servimos, sin importar su ubicación a nivel nacional."
-  }
-];
-
-// --- DATOS DE NUESTROS COMPROMISOS (sin cambios) ---
-const commitments = [
-  {
-    icon: Shield,
-    title: "Transparencia Total",
-    description: "No habrá números confusos ni sorpresas. Te explicaremos cada detalle de tus finanzas en un lenguaje claro y comprensible."
-  },
-  {
-    icon: Clock,
-    title: "Proactividad y Puntualidad",
-    description: "Nos anticipamos a los plazos fiscales y a las necesidades de tu negocio. Tu tranquilidad es nuestra prioridad."
-  },
-  {
-    icon: MessageSquare,
-    title: "Comunicación Directa y Accesible",
-    description: "Siempre tendrás una línea abierta con nosotros. Respondemos tus preguntas con rapidez y estamos aquí para asesorarte."
-  },
-  {
-    icon: GitBranch,
-    title: "Soluciones a su Medida",
-    description: "No ofrecemos soluciones genéricas, sino estrategias contables adaptadas a tus metas específicas."
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 const CommitmentAndMission = () => {
+  const { t } = useTranslation();
+
+  // --- DATOS PARA MISIÓN Y VISIÓN ---
+  const missionVisionData = [
+    {
+      icon: Target,
+      title: t('commitment.mission.title'),
+      description: t('commitment.mission.description')
+    },
+    {
+      icon: Eye,
+      title: t('commitment.vision.title'),
+      description: t('commitment.vision.description')
+    }
+  ];
+
+  // --- DATOS DE NUESTROS COMPROMISOS ---
+  const commitments = [
+    {
+      icon: Shield,
+      title: t('commitment.transparency.title'),
+      description: t('commitment.transparency.description')
+    },
+    {
+      icon: Clock,
+      title: t('commitment.proactivity.title'),
+      description: t('commitment.proactivity.description')
+    },
+    {
+      icon: MessageSquare,
+      title: t('commitment.communication.title'),
+      description: t('commitment.communication.description')
+    },
+    {
+      icon: GitBranch,
+      title: t('commitment.solutions.title'),
+      description: t('commitment.solutions.description')
+    }
+  ];
+  
   return (
     // Usamos un Fragmento de React (<>) para devolver dos secciones como un solo elemento
     <>
@@ -76,10 +79,10 @@ const CommitmentAndMission = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
-                  Nuestro Compromiso con el Cliente
+                  {t('commitment.title')}
                 </h2>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Más que tus contadores, somos tus socios estratégicos. Nuestra firma se construyó sobre un conjunto de promesas que cumplimos con cada cliente, sin excepción.
+                  {t('commitment.subtitle')}
                 </p>
               </div>
               <div className="space-y-6 pt-4">

@@ -1,26 +1,28 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import consiliumLogo from "@/assets/consilium-logo.png";
 import { openWhatsAppForAppointment } from '@/lib/whatsapp-utils';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: "Inicio", href: "#inicio" },
-   /*  { name: "Nosotros", href: "#nosotros" }, */
-    { name: "Servicios Contables", href: "#servicios" },
-    { name: "Equipo", href: "#equipo" },
-    { name: "Testimonios", href: "#testimonios" },
-    { name: "Contacto", href: "contacto" },
+    { name: "footer.home", href: "#inicio" },
+   /*  { name: "footer.about", href: "#nosotros" }, */
+    { name: "footer.accountingServices", href: "#servicios" },
+    { name: "footer.team", href: "#equipo" },
+    { name: "footer.testimonials", href: "#testimonios" },
+    { name: "footer.contact", href: "contacto" },
   ];
 
   const services = [
-    { name: "Bookkeeping Mensual", href: "#servicios" },
-    { name: "Cuentas por Cobrar y Pagar", href: "#servicios" },
-    { name: "Payroll Básico", href: "#servicios" },
-    { name: "Presentación de Taxes", href: "#servicios" },
-    { name: "Consultoría y Asesoría", href: "#servicios" },
-    { name: "Servicios Premium", href: "#servicios" },
+    { name: "footer.monthlyBookkeeping", href: "#servicios" },
+    { name: "footer.receivablesPayables", href: "#servicios" },
+    { name: "footer.basicPayroll", href: "#servicios" },
+    { name: "footer.taxPresentation", href: "#servicios" },
+    { name: "footer.consulting", href: "#servicios" },
+    { name: "footer.premiumServices", href: "#servicios" },
   ];
 
   return (
@@ -36,22 +38,21 @@ const Footer = () => {
               </div>
             </div>
             <p className=" leading-relaxed">
-              Especialistas en servicios de bookkeeping, contabilidad y asesoría para contratistas, 
-              pequeños negocios y emprendedores.
+              {t('footer.specialists')}
             </p>
             <div className="text-primary font-semibold italic">
-              "Su confianza es nuestro compromiso"
+              "{t('footer.trust')}"
             </div>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-primary">Contáctenos</h3>
+            <h3 className="text-xl font-bold text-primary">{t('footer.contactUs')}</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <div className="font-medium">Teléfonos:</div>
+                  <div className="font-medium">{t('footer.phones')}</div>
                   <div className=" space-y-1">
                     <div>+1 786 599-0462</div>
                     <div>+1 806 421-3785</div>
@@ -63,7 +64,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <div>
-                  <div className="font-medium">Email:</div>
+                  <div className="font-medium">{t('footer.email')}:</div>
                   <a href="mailto:info@consiliumgrpg.com" className=" hover:text-primary transition-colors">
                     info@consiliumgrpg.com
                   </a>
@@ -73,7 +74,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <div className="font-medium">Ubicación:</div>
+                  <div className="font-medium">{t('footer.location')}</div>
                   <div className="">
                     Miami - Florida, 33166, US
                   </div>
@@ -83,10 +84,10 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <div className="font-medium">Horarios:</div>
+                  <div className="font-medium">{t('footer.schedule')}</div>
                   <div className="">
-                    Lun - Vie: 9:00 AM - 6:00 PM<br />
-                    Sáb: 10:00 AM - 2:00 PM
+                    {t('footer.scheduleWeekdays')}<br />
+                    {t('footer.scheduleSaturday')}
                   </div>
                 </div>
               </div>
@@ -95,7 +96,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-primary">Enlaces Rápidos</h3>
+            <h3 className="text-xl font-bold text-primary">{t('footer.quickLinks')}</h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -103,7 +104,7 @@ const Footer = () => {
                     href={link.href} 
                     className=" hover:text-primary transition-colors hover:underline"
                   >
-                    {link.name}
+                    {t(link.name)}
                   </a>
                 </li>
               ))}
@@ -112,7 +113,7 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-primary">Servicios Contables</h3>
+            <h3 className="text-xl font-bold text-primary">{t('footer.services')}</h3>
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
@@ -120,7 +121,7 @@ const Footer = () => {
                     href={service.href} 
                     className="hover:text-primary transition-colors hover:underline"
                   >
-                    {service.name}
+                    {t(service.name)}
                   </a>
                 </li>
               ))}
@@ -131,7 +132,7 @@ const Footer = () => {
                 className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold px-6 py-3 rounded-lg shadow-golden hover:scale-105 transition-all duration-300 w-full"
                 onClick={openWhatsAppForAppointment}
               >
-                ¡Agende su cita hoy!
+                {t('nav.scheduleAppointment')}
               </button>
             </div>
           </div>
@@ -141,14 +142,14 @@ const Footer = () => {
         <div className="border-t border-gray-500 mt-12 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className=" text-sm">
-              © {currentYear} Consilium Multiservices LLC. Todos los derechos reservados.
+              © {currentYear} Consilium Multiservices LLC. {t('footer.rights')}.
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="/politica-privacidad" className=" hover:text-primary transition-colors">
-                Políticas de Privacidad
+                {t('footer.privacyPolicy')}
               </a>
               <a href="/aviso-legal" className=" hover:text-primary transition-colors">
-                Aviso Legal
+                {t('footer.legalNotice')}
               </a>
             </div>
           </div>

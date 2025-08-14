@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Phone } from "lucide-react";
 import { openWhatsAppForAppointment } from '@/lib/whatsapp-utils';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
+  
   return (
     <>
       {/* Hero Section */}
@@ -52,13 +55,13 @@ const Hero = () => {
                 className="text-lg text-gray-200 italic border-l-4 border-primary pl-6 max-w-2xl mx-auto md:mx-0  md:block"
                 style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.5)' }}
               >
-                "La contabilidad es el lenguaje del negocio, Nosotros lo hablamos por ti."
+                "{t('hero.quote')}"
 
                  <p 
                 className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto md:mx-0"
                 style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.6)' }}
               >
-                — <span className="font-semibold">Warrent Buffet</span>
+                <span className="font-semibold">{t('hero.quoteAuthor')}</span>
               </p> 
               </blockquote>
 
@@ -68,7 +71,7 @@ const Hero = () => {
                   className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-bold px-10 py-6 text-xl shadow-golden transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
                   onClick={openWhatsAppForAppointment}
                 >
-                  Agendar Consulta Gratuita
+                  {t('hero.scheduleButton')}
                 </Button>
               </div> 
             </div>
@@ -131,10 +134,10 @@ const Hero = () => {
           <div className="max-w-md mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                Contacte a un Experto
+                {t('hero.contactTitle')}
               </h2>
               <p className="text-gray-600">
-                Reciba una consulta gratuita y sin compromiso.
+                {t('hero.contactSubtitle')}
               </p>
             </div>
 
@@ -142,23 +145,23 @@ const Hero = () => {
               <form className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="nombre-mobile" className="sr-only">Nombre</label>
-                    <Input id="nombre-mobile" type="text" placeholder="Nombre" required />
+                    <label htmlFor="nombre-mobile" className="sr-only">{t('hero.form.name')}</label>
+                    <Input id="nombre-mobile" type="text" placeholder={t('hero.form.name')} required />
                   </div>
                   <div>
-                    <label htmlFor="apellidos-mobile" className="sr-only">Apellidos</label>
-                    <Input id="apellidos-mobile" type="text" placeholder="Apellidos" required />
+                    <label htmlFor="apellidos-mobile" className="sr-only">{t('hero.form.lastName')}</label>
+                    <Input id="apellidos-mobile" type="text" placeholder={t('hero.form.lastName')} required />
                   </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="phone-mobile" className="sr-only">Número de Teléfono</label>
-                  <Input id="phone-mobile" type="tel" placeholder="Número de Teléfono" required />
+                  <label htmlFor="phone-mobile" className="sr-only">{t('hero.form.phone')}</label>
+                  <Input id="phone-mobile" type="tel" placeholder={t('hero.form.phone')} required />
                 </div>
 
                 <div>
-                  <label htmlFor="email-mobile" className="sr-only">Correo Electrónico</label>
-                  <Input id="email-mobile" type="email" placeholder="Correo Electrónico" required />
+                  <label htmlFor="email-mobile" className="sr-only">{t('hero.form.email')}</label>
+                  <Input id="email-mobile" type="email" placeholder={t('hero.form.email')} required />
                 </div>
                 
                 {/* Botón del formulario con los colores de marca */}
@@ -167,11 +170,11 @@ const Hero = () => {
                   size="lg"
                   className="w-full font-bold text-base bg-gradient-primary hover:bg-primary-dark text-primary-foreground shadow-golden"
                 >
-                  Enviar para mi Consulta
+                  {t('hero.form.submit')}
                 </Button>
 
                 <p className="text-xs text-gray-500 text-center pt-1">
-                  Su información es 100% confidencial.
+                  {t('hero.form.confidential')}
                 </p>
               </form>
             </div>

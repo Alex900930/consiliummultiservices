@@ -1,5 +1,6 @@
 import { Phone } from 'lucide-react'; // Importamos el icono del teléfono
 import { Button } from '@/components/ui/button';
+import { useTranslation } from 'react-i18next';
 
 // --- DATOS DEL EQUIPO ACTUALIZADOS ---
 // Cambiamos 'bio' por 'quote' y añadimos un 'phone' para el CTA
@@ -28,6 +29,8 @@ const teamData = [
 ];
 
 const Team = () => {
+  const { t } = useTranslation();
+  
   return (
     <section id="equipo" className="py-20 lg:py-28 bg-gradient-hero">
       <div className="container mx-auto px-4">
@@ -35,12 +38,12 @@ const Team = () => {
         {/* Header de la sección */}
         <div className="text-center mb-16 lg:mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold  leading-tight">
-          Conoce quiénes están detrás de
+          {t('team.title')}
           </h2>
           <p className="mt-4 text-lg max-w-3xl mx-auto md:text-4xl font-bold leading-tight text-primary"
           style={{ textShadow: '0 4px 15px rgba(0, 0, 0, 0.7)' }}
           >
-          CONSILIUM Tax & Accounting
+          {t('team.subtitle')}
           </p>
         </div>
 
@@ -68,7 +71,7 @@ const Team = () => {
                   <Button asChild size="lg" className="w-full bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold shadow-golden">
                     <a href={`tel:${member.phone}`} className="flex items-center justify-center gap-2">
                       <Phone className="w-5 h-5" />
-                      Llamar Ahora
+                      {t('team.callNow')}
                     </a>
                   </Button>
                 </div>
