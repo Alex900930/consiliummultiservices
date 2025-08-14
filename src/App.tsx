@@ -8,6 +8,9 @@ import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ServiciosPage from "./pages/ServiciosPage";
+import Contactenos from "./pages/Contactenos";
+import PoliticasDePrivacidad from "./pages/PoliticasDePrivacidad";
+import AvisoLegal from "./pages/AvisoLegal";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +24,9 @@ const App = () => (
           <Route path="/" element={<Layout />}>
             <Route index element={<Index />} /> {/* 'index' es suficiente */}
             <Route path="servicios" element={<ServiciosPage />} /> {/* 'path' sin el / inicial es mejor para rutas anidadas */}
-            {/* ... aquí irán tus otras rutas como 'nosotros', 'contacto', etc. */}
+            <Route path="contacto" element={<Contactenos />} />
+            <Route path="politica-privacidad" element={<PoliticasDePrivacidad />} />
+            <Route path="aviso-legal" element={<AvisoLegal />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

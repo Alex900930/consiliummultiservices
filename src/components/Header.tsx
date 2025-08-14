@@ -22,7 +22,7 @@ const servicesForMenu = [
 const navItems = [
   { name: "Inicio", href: "/" },
   { name: "Servicios", href: "/servicios", submenu: servicesForMenu },
-  { name: "Nosotros", href: "/nosotros" },
+/*   { name: "Nosotros", href: "/nosotros" }, */
   { name: "Contacto", href: "/contacto" },
 ];
 
