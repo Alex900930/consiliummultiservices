@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { openWhatsAppForConsultation } from '@/lib/whatsapp-utils';
 
 const ClientsNationwide = () => {
   return (
@@ -27,8 +28,12 @@ const ClientsNationwide = () => {
           <p className="mt-4 text-lg text-gray-300" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
             No importa en qué estado se encuentre, nuestra firma está equipada con la tecnología y la experiencia para ofrecerle servicios contables y financieros de primer nivel de forma remota, segura y eficiente.
           </p>
-          <Button asChild size="lg" className="mt-8 bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold shadow-golden text-lg">
-            <Link to="/contacto">Programe una Consulta Virtual</Link>
+          <Button 
+            size="lg" 
+            className="mt-8 bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold shadow-golden text-lg"
+            onClick={openWhatsAppForConsultation}
+          >
+            Programe una Consulta Virtual
           </Button>
         </div>
       </div>

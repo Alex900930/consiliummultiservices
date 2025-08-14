@@ -7,6 +7,7 @@ import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { useTranslation } from 'react-i18next';
 import consiliumLogo from "@/assets/consilium-logo.png";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { openWhatsAppForAppointment } from '@/lib/whatsapp-utils';
 
 // Función para crear los IDs de ancla (sin cambios)
 const createAnchorId = (title) => title.toLowerCase().replace(/ /g, '-').replace(/[()]/g, '');
@@ -73,8 +74,11 @@ const Header = () => {
                 <span>Llámenos</span>
               </a>
               <LanguageSwitcher />
-              <Button asChild className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold px-6 py-2 shadow-golden">
-                <Link to="/contacto">¡Agende su cita hoy!</Link>
+              <Button 
+                className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold px-6 py-2 shadow-golden"
+                onClick={openWhatsAppForAppointment}
+              >
+                ¡Agende su cita hoy!
               </Button>
             </div>
             
@@ -110,8 +114,15 @@ const Header = () => {
             ))}
           </nav>
           <div className="pt-6 border-t border-border">
-            <Button asChild size="lg" className="w-full bg-gradient-primary ...">
-              <Link to="/contacto" onClick={closeMenu}>¡Agende su cita hoy!</Link>
+            <Button 
+              size="lg" 
+              className="w-full bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold shadow-golden"
+              onClick={() => {
+                openWhatsAppForAppointment();
+                closeMenu();
+              }}
+            >
+              ¡Agende su cita hoy!
             </Button>
           </div>
         </div>

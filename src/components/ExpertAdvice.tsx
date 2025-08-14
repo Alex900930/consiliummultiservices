@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { openWhatsAppForConsultation } from '@/lib/whatsapp-utils';
 
 const ExpertAdvice = () => {
   const videos = [
@@ -71,12 +72,12 @@ const ExpertAdvice = () => {
             <p className="text-muted-foreground mb-6">
               Nuestro equipo está listo para brindarte asesoría personalizada según las necesidades de tu empresa.
             </p>
-            <a 
-              href="#contact"
-              className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+            <button 
+              onClick={openWhatsAppForConsultation}
+              className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors cursor-pointer"
             >
               Solicitar Consulta Gratuita
-            </a>
+            </button>
           </div>
         </div>
       </div>

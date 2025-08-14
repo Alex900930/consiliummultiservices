@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2 } from 'lucide-react';
+import { openWhatsAppForServices } from '@/lib/whatsapp-utils';
 
 // --- ARRAY DE DATOS DE SERVICIOS SINCRONIZADO CON LA NUEVA INFORMACIÓN ---
 const servicesData = [
@@ -186,8 +187,11 @@ const ServiciosPage = () => {
             >
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">{service.title}</h2>
-                  <Button asChild className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold shadow-golden flex-shrink-0">
-                    <Link to={service.ctaLink}>{service.ctaText}</Link>
+                  <Button 
+                    className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold shadow-golden flex-shrink-0"
+                    onClick={openWhatsAppForServices}
+                  >
+                    {service.ctaText}
                   </Button>
                 </div>
                 <hr className="my-6" />

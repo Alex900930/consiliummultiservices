@@ -1,16 +1,17 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import consiliumLogo from "@/assets/consilium-logo.png";
+import { openWhatsAppForAppointment } from '@/lib/whatsapp-utils';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
     { name: "Inicio", href: "#inicio" },
-    { name: "Nosotros", href: "#nosotros" },
+   /*  { name: "Nosotros", href: "#nosotros" }, */
     { name: "Servicios Contables", href: "#servicios" },
     { name: "Equipo", href: "#equipo" },
     { name: "Testimonios", href: "#testimonios" },
-    { name: "Contacto", href: "#contacto" },
+    { name: "Contacto", href: "contacto" },
   ];
 
   const services = [
@@ -126,7 +127,10 @@ const Footer = () => {
             </ul>
 
             <div className="pt-4">
-              <button className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold px-6 py-3 rounded-lg shadow-golden hover:scale-105 transition-all duration-300 w-full">
+              <button 
+                className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold px-6 py-3 rounded-lg shadow-golden hover:scale-105 transition-all duration-300 w-full"
+                onClick={openWhatsAppForAppointment}
+              >
                 ¡Agende su cita hoy!
               </button>
             </div>

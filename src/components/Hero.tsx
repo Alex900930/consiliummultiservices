@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Phone } from "lucide-react";
+import { openWhatsAppForAppointment } from '@/lib/whatsapp-utils';
 
 const Hero = () => {
   return (
@@ -65,6 +66,7 @@ const Hero = () => {
                 <Button 
                   size="lg" 
                   className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-bold px-10 py-6 text-xl shadow-golden transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+                  onClick={openWhatsAppForAppointment}
                 >
                   Agendar Consulta Gratuita
                 </Button>

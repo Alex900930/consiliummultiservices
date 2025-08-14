@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Mail, Clock, Calculator, Shield, Users } from "lucide-react";
+import { openWhatsAppForAppointment, openWhatsAppForConsultation } from "@/lib/whatsapp-utils";
 
 const CTA = () => {
   return (
@@ -46,6 +47,7 @@ const CTA = () => {
             <Button 
               size="lg" 
               className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-bold px-10 py-4 text-lg shadow-golden transform hover:scale-105 transition-all duration-300"
+              onClick={openWhatsAppForAppointment}
             >
               ¡Agende su cita hoy!
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -53,7 +55,8 @@ const CTA = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg backdrop-blur-sm"
+              className="border-white/30 text-white hover:bg-primary font-semibold px-8 py-4 text-lg backdrop-blur-sm"
+              onClick={openWhatsAppForConsultation}
             >
               Llamar ahora: +1 786 599-0462
             </Button>
