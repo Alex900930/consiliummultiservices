@@ -42,8 +42,27 @@ const servicesData = [
     description: "Servicios de notariado confiables para tus documentos importantes.",
     image: "/images/services/notary.jpg",
     anchorId: createAnchorId("NOTARY PUBLIC")
+  },
+  {
+    title: "Estados Financieros Profesionales",
+    description: "Análisis y preparación de estados financieros para una toma de decisiones informada.",
+    image: "/images/services/estados-financieros.jpg", // Reemplaza con la ruta de tu imagen
+    anchorId: createAnchorId("ESTADOS FINANCIEROS PROFESIONALES")
+  },
+  {
+    title: "Consultoría Financiera y Empresarial",
+    description: "Asesoramiento estratégico para optimizar tus finanzas y hacer crecer tu negocio.",
+    image: "/images/services/consultoria.jpg", // Reemplaza con la ruta de tu imagen
+    anchorId: createAnchorId("CONSULTORIA FINANCIERA Y EMPRESARIAL")
+  },
+  {
+    title: "Servicios Especializados",
+    description: "Soluciones adaptadas a tu industria.",
+    image: "/images/services/especializados.jpg", // Reemplaza con la ruta de tu imagen
+    anchorId: createAnchorId("SERVICIOS ESPECIALIZADOS")
   }
 ];
+
 
 const Services = () => {
   return (
