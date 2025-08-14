@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <>
       {/* Hero Section */}
-      <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="inicio" className="relative min-h-screen flex items-end justify-center overflow-hidden">
         {/* 1. Background (Video y Fallback de Imagen) */}
         <div className="absolute inset-0 z-0">
           {/* Video para Desktop: limpio y sin overlays oscuros */}
@@ -35,56 +35,55 @@ const Hero = () => {
         </div>
 
         {/* 2. Contenido Principal */}
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+        <div className="relative z-10 container mx-auto px-4 mb-8">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-end">
             
             {/* Columna Izquierda: Mensaje y CTA */}
-            <div className="text-white space-y-6 text-center md:text-left">
-              <h1 
+            <div className="text-white space-y-6 text-center md:text-left ">
+             {/*  <h1 
                 className="text-5xl md:text-7xl font-bold leading-tight"
                 style={{ textShadow: '0 4px 15px rgba(0, 0, 0, 0.7)' }}
               >
-                Organizamos sus <span className="text-primary">finanzas</span>
-              </h1>
-              
-              {/* <p 
+               La contabilidad es el lenguaje del negocio. <span className="text-primary">Nosotros lo hablamos por ti</span>
+              </h1> */}
+
+              <blockquote 
+                className="text-lg text-gray-200 italic border-l-4 border-primary pl-6 max-w-2xl mx-auto md:mx-0  md:block"
+                style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.5)' }}
+              >
+                "La contabilidad es el lenguaje del negocio, Nosotros lo hablamos por ti."
+
+                 <p 
                 className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto md:mx-0"
                 style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.6)' }}
               >
-                — <span className="font-semibold">Yainier Consillium</span>, CEO y Contador Principal
-              </p> */}
-
-              <blockquote 
-                className="text-lg text-gray-200 italic border-l-4 border-primary pl-6 max-w-2xl mx-auto md:mx-0 hidden md:block"
-                style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.5)' }}
-              >
-                "Nuestra misión es mantener sus finanzas claras y sus impuestos al día, para que usted pueda enfocarse en hacer crecer su negocio."
+                — <span className="font-semibold">Warrent Buffet</span>
+              </p> 
               </blockquote>
 
-              <div className="pt-4">
-                {/* Botón CTA con los colores de marca solicitados */}
+               <div className="pt-4">
                 <Button 
                   size="lg" 
                   className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-bold px-10 py-6 text-xl shadow-golden transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
                 >
                   Agendar Consulta Gratuita
                 </Button>
-              </div>
+              </div> 
             </div>
 
             {/* Columna Derecha: Formulario de Contacto - Solo visible en Desktop */}
             <div className="hidden md:flex md:justify-end">
-              <div className="bg-white/95 backdrop-blur-md rounded-xl p-8 shadow-2xl w-full max-w-md border border-white/20">
-                <div className="text-center mb-6">
+              {/*<div className="bg-white/95 backdrop-blur-md rounded-xl p-8 shadow-2xl w-full max-w-md border border-white/20">*/}
+               {/*  <div className="text-center mb-6">
                   <h2 className="text-2xl font-bold text-gray-900">
                     Contacte a un Experto
                   </h2>
                   <p className="text-gray-600 mt-1">
                     Reciba una consulta gratuita y sin compromiso.
                   </p>
-                </div>
+                </div> */}
 
-                <form className="space-y-5">
+               {/*  <form className="space-y-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="nombre" className="sr-only">Nombre</label>
@@ -106,7 +105,6 @@ const Hero = () => {
                     <Input id="email" type="email" placeholder="Correo Electrónico" required />
                   </div>
                   
-                  {/* Botón del formulario con los colores de marca */}
                   <Button 
                     type="submit"
                     size="lg"
@@ -118,8 +116,8 @@ const Hero = () => {
                   <p className="text-xs text-gray-500 text-center pt-1">
                     Su información es 100% confidencial.
                   </p>
-                </form>
-              </div>
+                </form> */}
+             {/* </div>*/}
             </div>
           </div>
         </div>
