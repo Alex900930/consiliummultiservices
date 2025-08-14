@@ -289,6 +289,69 @@ const resources = {
       'services-page.list.8.content.2': 'Realización de ceremonias de matrimonio y formalización de divorcios simples.',
       'services-page.list.8.content.3': 'Notarización de poderes, testamentos y más, garantizando cumplimiento legal.',
 
+      //politicas de privacidade
+
+      'privacy-policy.heroAlt': 'Políticas de Privacidad de Consilium Multiservices',
+      'privacy-policy.title': 'Políticas de Privacidad',
+      'privacy-policy.lastUpdated': 'Última actualización: 21 de julio de 2025',
+
+      'privacy-policy.introduction.title': '📘 Introducción',
+      'privacy-policy.introduction.p1': 'Consilium Multiservices LLC reconoce la importancia de proteger la privacidad y seguridad de los datos personales de sus usuarios y clientes. La presente Política de Privacidad tiene por objeto informar, de manera clara y transparente, sobre la naturaleza de los datos que recopilamos, las finalidades de su tratamiento, y los derechos que asisten a los titulares de dichos datos. Por favor, lea detenidamente:',
+
+      'privacy-policy.data.title': '📊 Datos que recopilamos',
+      'privacy-policy.data.p1': 'En el marco de la interacción con nuestro sitio web, podemos recopilar algunas de las siguientes categorías de información:',
+      'privacy-policy.data.li1': '<strong>Datos personales identificativos:</strong> nombre completo, lugar de domicilio, número telefónico y/o celular y dirección de correo electrónico.',
+      'privacy-policy.data.li2': '<strong>Datos técnicos:</strong> dirección IP, tipo de navegador utilizado, ubicación geográfica estimada, y páginas visitadas dentro del sitio web.',
+
+      'privacy-policy.purpose.title': '🛠️ Finalidades del tratamiento de datos',
+      'privacy-policy.purpose.p1': 'La información recopilada se procesa con el fin de:',
+      'privacy-policy.purpose.li1': 'Prestar, administrar y optimizar nuestros servicios digitales y presenciales.',
+      'privacy-policy.purpose.li2': 'Gestionar solicitudes, trámites y comunicaciones vinculadas a los servicios ofrecidos.',
+      'privacy-policy.purpose.li3': 'Atender consultas, brindar asistencia técnica y mantener una comunicación efectiva.',
+      'privacy-policy.purpose.li4': 'Detectar, investigar y prevenir actividades fraudulentas, ilícitas o que pudieran comprometer la seguridad de la plataforma.',
+
+      'privacy-policy.rights.title': '🎛 Derechos del titular de los datos',
+      'privacy-policy.rights.p1': 'El usuario podrá, en todo momento y de manera gratuita:',
+      'privacy-policy.rights.li1': 'Abstenerse de proporcionar determinados datos personales, con la salvedad de que dicha decisión podría limitar el acceso a ciertas funcionalidades.',
+      'privacy-policy.rights.li2': 'Solicitar el acceso, rectificación, actualización o supresión de sus datos personales, conforme lo establecido por la normativa aplicable en materia de protección de datos.',
+
+      'privacy-policy.security.title': '🔐 Medidas de seguridad',
+      'privacy-policy.security.p1': 'Consilium Multiservices LLC implementa medidas técnicas, organizativas y administrativas apropiadas para garantizar la confidencialidad, integridad y disponibilidad de la información personal, y prevenir su acceso no autorizado, alteración o pérdida.',
+
+      'privacy-policy.cookies.title': '🍪 Uso de cookies',
+      'privacy-policy.cookies.p1': 'Este sitio web utiliza cookies y tecnologías análogas con el propósito de mejorar la experiencia de navegación y ofrecer contenidos personalizados. El usuario podrá configurar su navegador para rechazar o eliminar estas tecnologías, según sus preferencias.',
+
+      'privacy-policy.links.title': '🔗 Enlaces a sitios externos',
+      'privacy-policy.links.p1': 'El sitio web puede contener enlaces a plataformas o recursos externos que no están bajo nuestra gestión (como Instagram y Facebook). Consilium Multiservices LLC no se responsabiliza por el tratamiento de dichos datos efectuado por estos sitios ni por sus respectivas políticas de privacidad.',
+
+      'privacy-policy.modifications.title': '🔄 Modificaciones a la política',
+      'privacy-policy.modifications.p1': 'La presente política podrá ser modificada periódicamente. Las actualizaciones serán publicadas en esta misma sección, indicando la fecha de entrada en vigor correspondiente, de manera que puedas revisarlas cuando quieras.',
+
+      'privacy-policy.contact.title': '📬 Contacto',
+      'privacy-policy.contact.p1': 'Para realizar cualquier consulta puedes comunicarte con nosotros a través del siguiente medio <1>info@consiliumgrpg.com</1> para ejercer derechos o solicitar mayor información sobre esta Política de Privacidad.',
+
+      //avisolegal
+
+      'legal-notice.heroAlt': 'Aviso Legal de Consilium Multiservices',
+      'legal-notice.title': 'Aviso Legal',
+
+      'legal-notice.disclaimer': 'Consilium Multiservices LLC no es un bufete de abogados ni sus representantes son abogados. No ofrecemos asesoría legal ni representación legal ante autoridades o tribunales. Nuestros servicios se limitan a la preparación y asistencia en el llenado de formularios migratorios y trámites administrativos permitidos por la ley. Para asesoría legal, siempre recomendamos consultar con un abogado de inmigración debidamente autorizado.',
+      'legal-notice.readCarefully': 'Se recomienda leer detenidamente el contenido que sigue, a fin de comprender el alcance del presente documento:',
+
+      'legal-notice.owner.title': 'Titular del sitio web',
+      'legal-notice.owner.p1': 'El presente sitio web [www.consiliumgrpg.com] es operado por Consilium Multiservices LLC, entidad legalmente constituida en el Estado de Florida, EE.UU, con domicilio en 309 S Royal Poinciana Blvd, Miami, Fl, 33166, y correo electrónico de contacto: <1>info@consiliumgrpg.com</1>.',
+
+      'legal-notice.ip.title': 'Propiedad intelectual',
+      'legal-notice.ip.p1': 'Todos los contenidos publicados en este sitio —incluyendo, entre otros, textos, imágenes, logotipos, gráficos, documentos descargables y diseños— son propiedad exclusiva de Consilium Multiservices LLC, o se encuentran debidamente licenciados por terceros. Queda prohibida su reproducción, distribución o transformación sin autorización previa y expresa del titular.',
+      
+      'legal-notice.usage.title': 'Acceso y uso del sitio web',
+      'legal-notice.usage.p1': 'El usuario se compromete a utilizar este sitio de forma lícita y conforme a la normativa vigente. El uso indebido del contenido o la explotación comercial no autorizada podrán ser objeto de acciones legales. El acceso al sitio no implica relación contractual entre el usuario y el titular, salvo cuando se establezca explícitamente mediante otros medios.',
+
+      'legal-notice.liability.title': 'Exclusión de responsabilidad',
+      'legal-notice.liability.p1': 'Consilium Multiservices LLC no garantiza la continuidad o ausencia de errores en el sitio web, ni se responsabiliza por posibles daños derivados del uso del contenido o por la presencia de enlaces a sitios externos. La información ofrecida tiene fines informativos y puede ser modificada sin previo aviso.',
+
+      'legal-notice.jurisdiction.title': 'Normativa aplicable y jurisdicción',
+      'legal-notice.jurisdiction.p1': 'Este Aviso Legal se rige por la legislación aplicable en EEUU. En caso de conflicto o disputa derivada del uso del sitio web, las partes se someterán a la jurisdicción de los tribunales competentes en el Estado de Florida.',
 
       // And more translations...
 
@@ -582,6 +645,69 @@ const resources = {
       'services-page.list.8.content.2': 'Performing marriage ceremonies and formalizing simple divorces.',
       'services-page.list.8.content.3': 'Notarization of powers of attorney, wills, and more, ensuring legal compliance.',
 
+      //politica de privacidade
+
+      'privacy-policy.heroAlt': 'Privacy Policy of Consilium Multiservices',
+      'privacy-policy.title': 'Privacy Policy',
+      'privacy-policy.lastUpdated': 'Last updated: July 21, 2025',
+
+      'privacy-policy.introduction.title': '📘 Introduction',
+      'privacy-policy.introduction.p1': 'Consilium Multiservices LLC recognizes the importance of protecting the privacy and security of the personal data of its users and clients. This Privacy Policy aims to inform, clearly and transparently, about the nature of the data we collect, the purposes of its processing, and the rights of the data subjects. Please read carefully:',
+
+      'privacy-policy.data.title': '📊 Data We Collect',
+      'privacy-policy.data.p1': 'In the context of interaction with our website, we may collect some of the following categories of information:',
+      'privacy-policy.data.li1': '<strong>Personal identification data:</strong> full name, place of residence, telephone and/or cell phone number, and email address.',
+      'privacy-policy.data.li2': '<strong>Technical data:</strong> IP address, type of browser used, estimated geographical location, and pages visited within the website.',
+
+      'privacy-policy.purpose.title': '🛠️ Purposes of Data Processing',
+      'privacy-policy.purpose.p1': 'The collected information is processed for the purpose of:',
+      'privacy-policy.purpose.li1': 'Providing, managing, and optimizing our digital and in-person services.',
+      'privacy-policy.purpose.li2': 'Managing requests, procedures, and communications related to the services offered.',
+      'privacy-policy.purpose.li3': 'Answering inquiries, providing technical assistance, and maintaining effective communication.',
+      'privacy-policy.purpose.li4': 'Detecting, investigating, and preventing fraudulent, illegal, or activities that could compromise the security of the platform.',
+
+      'privacy-policy.rights.title': '🎛 Rights of the Data Subject',
+      'privacy-policy.rights.p1': 'The user may, at any time and free of charge:',
+      'privacy-policy.rights.li1': 'Refrain from providing certain personal data, with the caveat that such a decision may limit access to certain functionalities.',
+      'privacy-policy.rights.li2': 'Request access, rectification, updating, or deletion of their personal data, in accordance with the applicable data protection regulations.',
+
+      'privacy-policy.security.title': '🔐 Security Measures',
+      'privacy-policy.security.p1': 'Consilium Multiservices LLC implements appropriate technical, organizational, and administrative measures to ensure the confidentiality, integrity, and availability of personal information, and to prevent its unauthorized access, alteration, or loss.',
+
+      'privacy-policy.cookies.title': '🍪 Use of Cookies',
+      'privacy-policy.cookies.p1': 'This website uses cookies and similar technologies to improve the browsing experience and offer personalized content. The user can configure their browser to reject or delete these technologies, according to their preferences.',
+
+      'privacy-policy.links.title': '🔗 Links to External Sites',
+      'privacy-policy.links.p1': 'The website may contain links to external platforms or resources that are not under our management (such as Instagram and Facebook). Consilium Multiservices LLC is not responsible for the data processing carried out by these sites or for their respective privacy policies.',
+
+      'privacy-policy.modifications.title': '🔄 Policy Modifications',
+      'privacy-policy.modifications.p1': 'This policy may be modified periodically. Updates will be published in this same section, indicating the corresponding effective date, so you can review them whenever you want.',
+
+      'privacy-policy.contact.title': '📬 Contact',
+      'privacy-policy.contact.p1': 'For any inquiries, you can contact us through the following means <1>info@consiliumgrpg.com</1> to exercise rights or request more information about this Privacy Policy.',
+
+      //avisolegal
+
+      'legal-notice.heroAlt': 'Legal Notice of Consilium Multiservices',
+      'legal-notice.title': 'Legal Notice',
+
+      'legal-notice.disclaimer': 'Consilium Multiservices LLC is not a law firm, nor are its representatives attorneys. We do not offer legal advice or legal representation before authorities or courts. Our services are limited to the preparation and assistance in filling out immigration forms and administrative procedures permitted by law. For legal advice, we always recommend consulting with a duly authorized immigration attorney.',
+      'legal-notice.readCarefully': 'It is recommended to carefully read the following content in order to understand the scope of this document:',
+
+      'legal-notice.owner.title': 'Website Owner',
+      'legal-notice.owner.p1': 'This website [www.consiliumgrpg.com] is operated by Consilium Multiservices LLC, a legally constituted entity in the State of Florida, USA, with its address at 309 S Royal Poinciana Blvd, Miami, FL, 33166, and contact email: <1>info@consiliumgrpg.com</1>.',
+      
+      'legal-notice.ip.title': 'Intellectual Property',
+      'legal-notice.ip.p1': 'All content published on this site—including, but not limited to, texts, images, logos, graphics, downloadable documents, and designs—is the exclusive property of Consilium Multiservices LLC, or is duly licensed by third parties. Its reproduction, distribution, or transformation without the prior and express authorization of the owner is prohibited.',
+
+      'legal-notice.usage.title': 'Access and Use of the Website',
+      'legal-notice.usage.p1': 'The user agrees to use this site lawfully and in accordance with current regulations. Improper use of the content or unauthorized commercial exploitation may be subject to legal action. Access to the site does not imply a contractual relationship between the user and the owner, except when explicitly established by other means.',
+
+      'legal-notice.liability.title': 'Exclusion of Liability',
+      'legal-notice.liability.p1': 'Consilium Multiservices LLC does not guarantee the continuity or absence of errors on the website, nor is it responsible for possible damages arising from the use of the content or the presence of links to external sites. The information offered is for informational purposes and may be modified without prior notice.',
+
+      'legal-notice.jurisdiction.title': 'Applicable Law and Jurisdiction',
+      'legal-notice.jurisdiction.p1': 'This Legal Notice is governed by the applicable legislation in the USA. In the event of a conflict or dispute arising from the use of the website, the parties will submit to the jurisdiction of the competent courts in the State of Florida.',
 
       // And more translations...
     }
