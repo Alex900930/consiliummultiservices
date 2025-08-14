@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import Commitment from "@/components/Commitment";
 import Process from "@/components/Process";
 import ClientsNationwide from "@/components/ClientsNationwide";
+import CommitmentAndMission from "@/components/CommitmentAndMission";
 
 const Index = () => {
   return (
@@ -17,7 +18,8 @@ const Index = () => {
       <Services />
      {/*  <About /> */}
       <Testimonials />
-      <Commitment />
+      <CommitmentAndMission />
+      {/* <Commitment /> */}
       <Process />
       <ClientsNationwide />
       <Team />

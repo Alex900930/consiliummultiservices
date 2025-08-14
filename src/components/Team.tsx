@@ -8,21 +8,21 @@ const teamData = [
     name: 'YAINIER SANCHEZ',
     role: 'CO - CEO Consilium Tax & Accounting',
     image: '/team/yainier-consilium.jpg',
-    quote: '"Tu éxito financiero es nuestra meta. Siempre estamos disponibles para guiarte."',
+    quote: '"Especialista en preparación de impuestos y servicios contables para pequeñas empresas. Su enfoque está en ayudar a emprendedores y dueños de negocios a mantener sus finanzas en orden, cumplir con sus obligaciones fiscales y optimizar sus recursos. Con compromiso y precisión, ofrece soluciones contables adaptadas a las necesidades de cada cliente."',
     phone: '18064213785' // Reemplaza con el número de teléfono real
   },
   {
     name: 'CAROLINA GONZALEZ',
     role: 'CO - CEO Consilium Tax & Accounting',
     image: '/team/ana-consilium.jpg',
-    quote: '"Transformamos la complejidad de los números en claridad y tranquilidad para ti."',
+    quote: '"Experta en la preparación de formularios migratorios con amplia experiencia ayudando a la comunidad en procesos como: Asilo, permisos de trabajo, peticiones familiares y más. Además, cuenta con licencia como agente de seguros de vida y salud, brindando asesoría confiable y personalizada para proteger a las familias en cada etapa de su vida."',
     phone: '18064213785'
   },
   {
     name: 'KARINA GÓMEZ', // Puedes cambiar este nombre por el real
     role: 'Asistente Administrativo',
     image: '/team/jennifer-martinez.png', // Asegúrate que el nombre y extensión (.jpg o .png) sean correctos
-    quote: '"Mi compromiso es que te sientas escuchado y apoyado en cada paso del proceso."',
+    quote: '"Mano derecha de nuestro equipo. Con amplia experiencia en atención al cliente y tareas administrativas. Karina se encarga de coordinar citas, dar seguimiento a los casos y garantizar una atención amable, eficiente y personalizada. Es un pilar clave en la conexión directa con nuestra comunidad."',
     phone: '18064213785'
   }
 ];
@@ -35,10 +35,12 @@ const Team = () => {
         {/* Header de la sección */}
         <div className="text-center mb-16 lg:mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold  leading-tight">
-            Conozca a Nuestro Equipo
+          Conoce quiénes están detrás de
           </h2>
-          <p className="mt-4 text-lg max-w-3xl mx-auto">
-            Los profesionales apasionados y dedicados a la salud financiera de su negocio.
+          <p className="mt-4 text-lg max-w-3xl mx-auto md:text-4xl font-bold leading-tight text-primary"
+          style={{ textShadow: '0 4px 15px rgba(0, 0, 0, 0.7)' }}
+          >
+          CONSILIUM Tax & Accounting
           </p>
         </div>
 
