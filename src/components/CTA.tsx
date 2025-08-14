@@ -74,7 +74,7 @@ const CTA = () => {
           </div>
 
           {/* Additional Services Highlight */}
-          <div className="mt-16 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+        {/*   <div className="mt-16 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <h3 className="text-2xl font-bold mb-6">Nuestro Compromiso con el Cliente</h3>
             <p className="text-lg text-gray-200 mb-8">
               Nuestro equipo está dedicado a ayudarle a mantener sus finanzas organizadas 
@@ -97,7 +97,7 @@ const CTA = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -154,7 +154,7 @@ const ServiciosPage = () => {
       <section className="lg:hidden">
         <div className="h-[50vh]">
           <img
-            src="/yainie-consiliumSERVICES.jpg"
+            src="/yainie-consiliumSERVICES.png"
             alt="Yainier Consillium - CEO de Consilium Multiservices"
             className="w-full h-full object-cover object-center"
           />

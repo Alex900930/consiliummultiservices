@@ -7,7 +7,7 @@ const PoliticasDePrivacidad = () => {
     <>
       {/* ====== 1. HERO SECTION - SOLO IMAGEN ====== */}
       {/* Mantenemos la consistencia visual con una imagen de cabecera limpia. */}
-      <section className="h-[50vh] lg:h-[60vh]">
+      <section className="h-[50vh] lg:h-[90vh]">
         <img
           src="/yainie-consiliumSERVICES.png" // Usando la imagen de marca consistente
           alt="Políticas de Privacidad de Consilium Multiservices"

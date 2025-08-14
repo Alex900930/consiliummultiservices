@@ -7,7 +7,7 @@ const AvisoLegal = () => {
     <>
       {/* ====== 1. HERO SECTION - SOLO IMAGEN ====== */}
       {/* Estructura visual consistente con las otras páginas. */}
-      <section className="h-[50vh] lg:h-[60vh]">
+      <section className="h-[50vh] lg:h-[90vh]">
         <img
           src="/yainie-consiliumSERVICES.png" // Imagen de marca
           alt="Aviso Legal de Consilium Multiservices"
