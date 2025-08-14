@@ -36,7 +36,7 @@ const Hero = () => {
         </div>
 
         {/* 2. Contenido Principal */}
-        <div className="relative z-10 container mx-auto px-4 mb-8">
+        <div className="relative z-10 container mx-auto px-4 mb-20">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-end">
             
             {/* Columna Izquierda: Mensaje y CTA */}
