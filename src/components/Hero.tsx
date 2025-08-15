@@ -129,7 +129,7 @@ const Hero = () => {
       </section>
 
       {/* Formulario para Tablet y Móvil - Debajo del Hero */}
-      <section className="md:hidden bg-white py-16">
+      <section className="hidden bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-md mx-auto">
             <div className="text-center mb-8">
