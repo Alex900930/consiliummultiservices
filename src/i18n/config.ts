@@ -4,6 +4,23 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   es: {
     translation: {
+
+      //contacto
+
+      'contact-page.heroAlt': 'Contacto con Consilium Multiservices',
+'contact-page.title': 'Visítanos o Contáctanos',
+'contact-page.description': 'Encuéntranos en Miami o completa el formulario. Estamos listos para ofrecerte la solución que tu futuro necesita.',
+'contact-page.mapAlt': 'Ubicación de Consilium Multiservices en Google Maps',
+'contact-page.address': '309 S Royal Poinciana Blvd, Miami, FL 33166, Estados Unidos',
+'contact-page.form.title': 'Solicita tu Consulta Gratuita',
+'contact-page.form.name': 'Nombre',
+'contact-page.form.lastName': 'Apellidos',
+'contact-page.form.phone': 'Número de Teléfono',
+'contact-page.form.email': 'Correo Electrónico',
+'contact-page.form.submit': 'Enviar para mi Consulta',
+'contact-page.form.confidential': 'Su información es 100% confidencial.',
+
+
       // Header
       'nav.inicio': 'Inicio',
       'nav.nosotros': 'Nosotros',
@@ -360,6 +377,21 @@ const resources = {
   },
   en: {
     translation: {
+      //contacto
+
+     'contact-page.heroAlt': 'Contact Consilium Multiservices',
+'contact-page.title': 'Visit or Contact Us',
+'contact-page.description': 'Find us in Miami or fill out the form. We are ready to offer you the solution your future needs.',
+'contact-page.mapAlt': 'Location of Consilium Multiservices on Google Maps',
+'contact-page.address': '309 S Royal Poinciana Blvd, Miami, FL 33166, United States',
+'contact-page.form.title': 'Request Your Free Consultation',
+'contact-page.form.name': 'Name',
+'contact-page.form.lastName': 'Last Name',
+'contact-page.form.phone': 'Phone Number',
+'contact-page.form.email': 'Email',
+'contact-page.form.submit': 'Send for my Consultation',
+'contact-page.form.confidential': 'Your information is 100% confidential.',
+
       // Header
       'nav.inicio': 'Home',
       'nav.nosotros': 'About',
@@ -708,6 +740,24 @@ const resources = {
 
       'legal-notice.jurisdiction.title': 'Applicable Law and Jurisdiction',
       'legal-notice.jurisdiction.p1': 'This Legal Notice is governed by the applicable legislation in the USA. In the event of a conflict or dispute arising from the use of the website, the parties will submit to the jurisdiction of the competent courts in the State of Florida.',
+
+      //
+
+      'contact.hero.alt': 'Contacto con Consilium Multiservices',
+      'contact.title': 'Visítanos o Contáctanos',
+      'contact.description': 'Encuéntranos en Miami o completa el formulario. Estamos listos para ofrecerte la solución que tu futuro necesita.',
+      'contact.map.alt': 'Ubicación de Consilium Multiservices en Google Maps',
+      'contact.address': '309 S Royal Poinciana Blvd, Miami, FL 33166, Estados Unidos',
+      'contact.form.title': 'Solicita tu Consulta Gratuita',
+      'contact.form.name': 'Nombre',
+      'contact.form.lastName': 'Apellidos',
+      'contact.form.phone': 'Número de Teléfono',
+      'contact.form.email': 'Correo Electrónico',
+      'contact.form.submit': 'Enviar para mi Consulta',
+      'contact.form.confidential': 'Su información es 100% confidencial.',
+
+
+      
 
       // And more translations...
     }
