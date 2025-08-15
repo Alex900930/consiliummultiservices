@@ -25,8 +25,8 @@ const App = () => (
             <Route index element={<Index />} /> {/* 'index' es suficiente */}
             <Route path="servicios" element={<ServiciosPage />} /> {/* 'path' sin el / inicial es mejor para rutas anidadas */}
             <Route path="contacto" element={<Contactenos />} />
-            <Route path="politica-privacidad" element={<PoliticasDePrivacidad />} />
-            <Route path="aviso-legal" element={<AvisoLegal />} />
+            <Route path="politicaPrivacidad" element={<PoliticasDePrivacidad />} />
+            <Route path="avisoLegal" element={<AvisoLegal />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
