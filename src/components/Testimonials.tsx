@@ -1,9 +1,11 @@
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'; // Mantenemos la importación para las traducciones
+import React, { useState, useEffect, useRef } from 'react'; // Añadimos los hooks para el carrusel
+import Autoplay from "embla-carousel-autoplay"; // Añadimos el plugin de autoplay
 
-// Datos de testimonios con un formato más completo
+// Datos de testimonios (sin cambios)
 const testimonialsData = [
   {
     name: "Carlos R.",
@@ -32,27 +34,44 @@ const testimonialsData = [
 ];
 
 const Testimonials = () => {
+  // Mantenemos el hook de traducción
   const { t } = useTranslation();
+
+  // --- LÓGICA DEL CARRUSEL (AÑADIDA) ---
+  const plugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
+  const [api, setApi] = useState(null);
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
+  // --- FIN DE LA LÓGICA DEL CARRUSEL ---
   
   return (
-    // ¡LA CLAVE! Contenedor relativo para superponer contenido sobre el fondo
     <section id="testimonios" className="relative py-20 lg:py-28">
       
-      {/* --- Capa de Fondo --- */}
+      {/* Fondo y superposición (sin cambios) */}
       <div className="absolute inset-0 z-0">
         <img
-          // ¡IMPORTANTE! Usa una imagen de fondo profesional y con desenfoque
           src="/images/backgrounds/office-blur.jpg" 
           alt="Fondo de oficina profesional"
           className="w-full h-full object-cover"
         />
-        {/* Superposición oscura para legibilidad del texto */}
         <div className="absolute inset-0 bg-gray-900/80"></div>
       </div>
 
-      {/* --- Capa de Contenido --- */}
       <div className="relative z-10 container mx-auto px-4">
-        {/* Header de la sección */}
+        {/* Header de la sección, usando la traducción (sin cambios) */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
             {t('testimonials.title')}
@@ -62,8 +81,10 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Carrusel de Testimonios */}
+        {/* Carrusel de Testimonios (MODIFICADO para incluir plugins y API) */}
         <Carousel
+          setApi={setApi}
+          plugins={[plugin.current]}
           opts={{ align: "start", loop: true }}
           className="w-full max-w-6xl mx-auto"
         >
@@ -71,7 +92,6 @@ const Testimonials = () => {
             {testimonialsData.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-4">
-                  {/* Tarjeta con efecto "Glassmorphism" */}
                   <Card className="h-full bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-xl">
                     <CardContent className="p-8 flex flex-col justify-between h-full">
                       <div>
@@ -97,6 +117,19 @@ const Testimonials = () => {
           <CarouselPrevious className="hidden sm:flex" />
           <CarouselNext className="hidden sm:flex" />
         </Carousel>
+        
+        {/* --- PUNTOS DE NAVEGACIÓN (AÑADIDOS, SOLO PARA MÓVIL) --- */}
+        <div className="sm:hidden flex justify-center items-center gap-2 mt-4">
+            {Array.from({ length: count }).map((_, index) => (
+                <button
+                    key={index}
+                    onClick={() => api?.scrollTo(index)}
+                    className={`h-2 w-2 rounded-full transition-colors ${
+                        current === index + 1 ? 'bg-white' : 'bg-white/50'
+                    }`}
+                />
+            ))}
+        </div>
       </div>
     </section>
   );
