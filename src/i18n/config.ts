@@ -165,7 +165,7 @@ const resources = {
       // Team
       'team.title': 'Conoce quiénes están detrás de',
       'team.subtitle': 'CONSILIUM Tax & Accounting',
-      'team.callNow': 'Llamar Ahora',
+      'team.callNow': 'Llamar ahora, {{name}}',
 
       // Testimonials
       'testimonials.title': 'Lo que dicen nuestros clientes',
@@ -536,7 +536,8 @@ const resources = {
       // Team
       'team.title': 'Meet who\'s behind',
       'team.subtitle': 'CONSILIUM Tax & Accounting',
-      'team.callNow': 'Call Now',
+       // En la sección en: { translation: { ... } }
+      'team.callNow': 'Call {{name}} now',
 
       // Testimonials
       'testimonials.title': 'What our clients say',

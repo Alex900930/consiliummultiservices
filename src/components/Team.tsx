@@ -30,41 +30,51 @@ const Team: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {/* Mapeamos sobre los datos estáticos */}
-          {teamStaticData.map((member) => (
-            <div key={member.id} className="rounded-lg shadow-md overflow-hidden border border-gray-500 text-center flex flex-col hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <img
-                src={member.image}
-                // Construimos la clave del nombre para el alt text
-                alt={t(`team.member.${member.id}.name`)}
-                className="w-full h-80 object-cover object-center"
-              />
-              <div className="p-6 flex flex-col flex-grow">
-                {/* 
-                  AQUÍ ESTÁ LA MAGIA: 
-                  Construimos la clave de traducción dinámicamente para cada propiedad.
-                */}
-                <h3 className="text-2xl font-bold text-primary">
-                  {t(`team.member.${member.id}.name`)}
-                </h3>
-                <p className="text-md mt-1">
-                  {t(`team.member.${member.id}.role`)}
-                </p>
-                
-                <p className="italic my-4 flex-grow">
-                  "{t(`team.member.${member.id}.quote`)}"
-                </p>
-                
-                <div className="mt-auto pt-4">
-                  <Button asChild size="lg" className="w-full bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold shadow-golden">
-                    <a href={`tel:${member.phone}`} className="flex items-center justify-center gap-2">
-                      <Phone className="w-5 h-5" />
-                      {t('team.callNow')}
-                    </a>
-                  </Button>
+          {teamStaticData.map((member) => {
+            // Obtenemos el nombre del miembro para usarlo en el botón
+            const memberName = t(`team.member.${member.id}.name`);
+             
+            return (
+              <div key={member.id} className="rounded-lg shadow-md overflow-hidden border border-gray-500 text-center flex flex-col hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <img
+                  src={member.image}
+                  // Construimos la clave del nombre para el alt text
+                  alt={memberName}
+                  className="w-full h-80 object-cover object-center"
+                />
+                <div className="p-6 flex flex-col flex-grow">
+                  {/* 
+                    AQUÍ ESTÁ LA MAGIA: 
+                    Construimos la clave de traducción dinámicamente para cada propiedad.
+                  */}
+                  <h3 className="text-2xl font-bold text-primary">
+                    {memberName}
+                  </h3>
+                  <p className="text-md mt-1">
+                    {t(`team.member.${member.id}.role`)}
+                  </p>
+                  
+                  <p className="italic my-4 flex-grow">
+                    "{t(`team.member.${member.id}.quote`)}"
+                  </p>
+                  
+                  <div className="mt-auto pt-4">
+                    <Button asChild size="lg" className="w-full bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold shadow-golden">
+                      <a href={`tel:${member.phone}`} className="flex items-center justify-center gap-2">
+                        <Phone className="w-5 h-5" />
+                        {/* 
+                          AQUÍ ESTÁ EL CAMBIO PRINCIPAL:
+                          Pasamos un segundo argumento a `t` con el nombre del miembro.
+                          La librería reemplazará {{name}} con el valor de memberName.
+                        */}
+                        {t('team.callNow', { name: memberName })}
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>
