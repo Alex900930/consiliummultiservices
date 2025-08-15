@@ -1,14 +1,13 @@
 import { UserCheck, ClipboardList, Cog, TrendingUp } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Button } from '@/components/ui/button'; // <-- 1. IMPORTA EL BOTÓN
 
 const Process = () => {
-  // 1. Llama al hook DENTRO del componente
   const { t } = useTranslation();
 
-  // 2. Define tus datos DENTRO del componente para que puedan usar 't'
   const processSteps = [
     {
-      icon: UserCheck, // El icono se pasa como un componente
+      icon: UserCheck,
       title: t('process.consultation.title'),
       description: t('process.consultation.description')
     },
@@ -43,17 +42,13 @@ const Process = () => {
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
           {processSteps.map((step, index) => {
-            // Renombramos 'step.icon' a 'IconComponent' para que JSX lo reconozca como un componente
             const IconComponent = step.icon; 
             return (
               <div key={index} className="bg-gray-50/70 p-8 rounded-xl border border-gray-200/80 hover:shadow-lg hover:border-gray-300 transition-all duration-300">
                 <div className="flex items-center space-x-4 mb-4">
-                  
-                  {/* 3. Renderiza el icono como un componente y añádele estilos */}
                   <div className="flex-shrink-0 w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground shadow-md">
                     <IconComponent className="w-8 h-8" />
                   </div>
-
                   <div>
                     <h3 className="text-xl font-bold text-gray-800">{step.title}</h3>
                   </div>
@@ -65,6 +60,22 @@ const Process = () => {
             );
           })}
         </div>
+
+        {/* --- INICIO DEL NUEVO BOTÓN CTA --- */}
+        {/* 2. AÑADE ESTE BLOQUE COMPLETO */}
+        <div className="mt-16 text-center">
+          <Button 
+            asChild 
+            size="lg" 
+            className="w-full sm:w-auto bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold shadow-golden"
+          >
+            <a href="/#contacto">
+              {t('process.ctaButton')}
+            </a>
+          </Button>
+        </div>
+        {/* --- FIN DEL NUEVO BOTÓN CTA --- */}
+
       </div>
     </section>
   );

@@ -170,6 +170,7 @@ const resources = {
       // Testimonials
       'testimonials.title': 'Lo que dicen nuestros clientes',
       'testimonials.subtitle': 'La confianza y el éxito de quienes trabajan con nosotros es nuestra mayor recompensa.',
+      'testimonials.ctaButton': 'Quiero ser el próximo',
 
       // Commitment and Mission
       'commitment.mission.title': 'Nuestra Misión',
@@ -186,6 +187,7 @@ const resources = {
       'commitment.communication.description': 'Siempre tendrás una línea abierta con nosotros. Respondemos tus preguntas con rapidez y estamos aquí para asesorarte.',
       'commitment.solutions.title': 'Soluciones a su Medida',
       'commitment.solutions.description': 'No ofrecemos soluciones genéricas, sino estrategias contables adaptadas a tus metas específicas.',
+      'commitment.ctaButton': 'Hablemos de tu futuro',
 
       // Process
       'process.title': 'Manténgase Informado en Cada Etapa',
@@ -198,6 +200,7 @@ const resources = {
       'process.implementation.description': 'Nuestro equipo de expertos se pone manos a la obra. Ejecutamos el plan con precisión, manteniendo sus registros al día, procesando la nómina y preparando sus declaraciones.',
       'process.reports.title': 'Reportes y Seguimiento Continuo',
       'process.reports.description': 'Le mantenemos informado con reportes financieros claros y reuniones periódicas. Monitoreamos su progreso y ajustamos la estrategia para asegurar su crecimiento continuo.',
+      'process.ctaButton': 'Dar el primer paso',
 
       // Clients Nationwide
       'clients.title': 'Brindamos Servicios a Nivel Nacional',
@@ -542,6 +545,7 @@ const resources = {
       // Testimonials
       'testimonials.title': 'What our clients say',
       'testimonials.subtitle': 'The trust and success of those who work with us is our greatest reward.',
+      'testimonials.ctaButton': 'I want to be next',
 
       // Commitment and Mission
       'commitment.mission.title': 'Our Mission',
@@ -558,6 +562,7 @@ const resources = {
       'commitment.communication.description': 'You will always have an open line with us. We respond to your questions quickly and are here to advise you.',
       'commitment.solutions.title': 'Solutions Tailored to You',
       'commitment.solutions.description': 'We don\'t offer generic solutions, but accounting strategies adapted to your specific goals.',
+      'commitment.ctaButton': "Let's talk about your future",
 
       // Process
       'process.title': 'Stay Informed at Every Stage',
@@ -570,7 +575,7 @@ const resources = {
       'process.implementation.description': 'Our team of experts gets to work. We execute the plan with precision, keeping your records up to date, processing payroll and preparing your returns.',
       'process.reports.title': 'Reports and Continuous Follow-up',
       'process.reports.description': 'We keep you informed with clear financial reports and periodic meetings. We monitor your progress and adjust the strategy to ensure your continuous growth.',
-
+      'process.ctaButton': 'Take the first step', 
       // Clients Nationwide
       'clients.title': 'We Provide Services Nationwide',
       'clients.subtitle': 'No matter which state you are in, our firm is equipped with the technology and experience to offer you first-class accounting and financial services remotely, safely and efficiently.',

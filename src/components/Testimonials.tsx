@@ -1,9 +1,10 @@
 import { Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { useTranslation } from 'react-i18next'; // Mantenemos la importación para las traducciones
-import React, { useState, useEffect, useRef } from 'react'; // Añadimos los hooks para el carrusel
-import Autoplay from "embla-carousel-autoplay"; // Añadimos el plugin de autoplay
+import { useTranslation } from 'react-i18next';
+import React, { useState, useEffect, useRef } from 'react';
+import Autoplay from "embla-carousel-autoplay";
+import { Button } from '@/components/ui/button'; // <-- 1. IMPORTA EL BOTÓN
 
 // Datos de testimonios (sin cambios)
 const testimonialsData = [
@@ -34,10 +35,8 @@ const testimonialsData = [
 ];
 
 const Testimonials = () => {
-  // Mantenemos el hook de traducción
   const { t } = useTranslation();
 
-  // --- LÓGICA DEL CARRUSEL (AÑADIDA) ---
   const plugin = useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true })
   );
@@ -55,12 +54,11 @@ const Testimonials = () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
-  // --- FIN DE LA LÓGICA DEL CARRUSEL ---
   
   return (
     <section id="testimonios" className="relative py-20 lg:py-28">
       
-      {/* Fondo y superposición (sin cambios) */}
+      {/* Fondo y superposición */}
       <div className="absolute inset-0 z-0">
         <img
           src="/images/backgrounds/office-blur.jpg" 
@@ -71,7 +69,7 @@ const Testimonials = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-4">
-        {/* Header de la sección, usando la traducción (sin cambios) */}
+        {/* Header de la sección */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
             {t('testimonials.title')}
@@ -81,7 +79,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Carrusel de Testimonios (MODIFICADO para incluir plugins y API) */}
+        {/* Carrusel de Testimonios */}
         <Carousel
           setApi={setApi}
           plugins={[plugin.current]}
@@ -118,7 +116,7 @@ const Testimonials = () => {
           <CarouselNext className="hidden sm:flex" />
         </Carousel>
         
-        {/* --- PUNTOS DE NAVEGACIÓN (AÑADIDOS, SOLO PARA MÓVIL) --- */}
+        {/* Puntos de navegación (móvil) */}
         <div className="sm:hidden flex justify-center items-center gap-2 mt-4">
             {Array.from({ length: count }).map((_, index) => (
                 <button
@@ -130,6 +128,22 @@ const Testimonials = () => {
                 />
             ))}
         </div>
+
+        {/* --- INICIO DEL NUEVO BOTÓN CTA --- */}
+        {/* 2. AÑADE ESTE BLOQUE COMPLETO */}
+        <div className="mt-16 text-center">
+          <Button 
+            asChild 
+            size="lg" 
+            className="w-full sm:w-auto bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold shadow-golden"
+          >
+            <a href="/#contacto">
+              {t('testimonials.ctaButton')}
+            </a>
+          </Button>
+        </div>
+        {/* --- FIN DEL NUEVO BOTÓN CTA --- */}
+
       </div>
     </section>
   );

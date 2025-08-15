@@ -1,5 +1,6 @@
 import { Shield, Clock, MessageSquare, GitBranch, Target, Eye } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Button } from '@/components/ui/button'; // <-- 1. IMPORTA EL BOTÓN
 
 const CommitmentAndMission = () => {
   const { t } = useTranslation();
@@ -43,11 +44,10 @@ const CommitmentAndMission = () => {
   ];
   
   return (
-    // Usamos un Fragmento de React (<>) para devolver dos secciones como un solo elemento
     <>
-      {/* ====== NUEVA SECCIÓN: MISIÓN Y VISIÓN ====== */}
+      {/* ====== SECCIÓN: MISIÓN Y VISIÓN ====== */}
       <section id="mision-vision" className="py-20 lg:py-28 bg-gradient">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 flex flex-col justify-center items-center">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {missionVisionData.map((item, index) => (
               <div key={index} className="flex flex-col items-center text-center lg:items-start lg:text-left">
@@ -55,14 +55,25 @@ const CommitmentAndMission = () => {
                   <item.icon className="w-8 h-8" />
                 </div>
                 <h2 className="text-3xl font-bold ">{item.title}</h2>
-                <p className="mt-4 text-base  max-w-lg leading-relaxed">{item.description}</p>
+                <p className="mt-4 text-base max-w-lg leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
+          <div className="pt-10">
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="w-full sm:w-auto bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold shadow-golden"
+                >
+                  <a href="/#contacto">
+                    {t('commitment.ctaButton')}
+                  </a>
+                </Button>
+              </div>
         </div>
       </section>
 
-      {/* ====== SECCIÓN DE COMPROMISO EXISTENTE (Revisada para fluir con la nueva sección) ====== */}
+      {/* ====== SECCIÓN DE COMPROMISO ====== */}
       <section id="compromiso" className="relative py-20 lg:py-28 text-white">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-hero"></div>
@@ -98,6 +109,22 @@ const CommitmentAndMission = () => {
                   </div>
                 ))}
               </div>
+
+              {/* --- INICIO DEL NUEVO BOTÓN CTA --- */}
+              {/* 2. AÑADE ESTE BLOQUE COMPLETO */}
+              <div className="pt-6">
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="w-full sm:w-auto bg-gradient-primary hover:bg-primary-dark text-primary-foreground font-semibold shadow-golden"
+                >
+                  <a href="/#contacto">
+                    {t('commitment.ctaButton')}
+                  </a>
+                </Button>
+              </div>
+              {/* --- FIN DEL NUEVO BOTÓN CTA --- */}
+
             </div>
           </div>
         </div>
@@ -106,5 +133,4 @@ const CommitmentAndMission = () => {
   );
 };
 
-// Se recomienda cambiar el nombre de la exportación para reflejar el nuevo contenido
 export default CommitmentAndMission;
