@@ -152,10 +152,10 @@ const Footer = () => {
               © {currentYear} Consilium Multiservices LLC. {t('footer.rights')}.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="/politica-privacidad" className="hover:text-primary transition-colors">
+              <a href="/politicaPrivacidad" className="hover:text-primary transition-colors">
                 {t('footer.privacyPolicy')}
               </a>
-              <a href="/aviso-legal" className="hover:text-primary transition-colors">
+              <a href="/avisoLegal" className="hover:text-primary transition-colors">
                 {t('footer.legalNotice')}
               </a>
             </div>
