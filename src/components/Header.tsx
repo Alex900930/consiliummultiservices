@@ -1,15 +1,28 @@
 import { useState } from "react";
-// ¡IMPORTANTE! Importamos HashLink y le damos el alias "Link" para usarlo en todo el componente.
-// Ahora, cada vez que escribamos <Link>, estaremos usando el poderoso HashLink.
 import { HashLink as Link } from 'react-router-hash-link'; 
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+// 1. Importa los iconos de Facebook e Instagram
+import { Menu, X, Phone, ChevronDown, Facebook, Instagram } from "lucide-react"; 
 import { useTranslation } from 'react-i18next';
 import consiliumLogo from "@/assets/consilium-logo.png";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { openWhatsAppForAppointment } from '@/lib/whatsapp-utils';
 
-// Función para crear los IDs de ancla (sin cambios)
+// 2. Define los enlaces a tus redes sociales en un solo lugar para fácil mantenimiento
+const socialLinks = [
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/ConsiliumMultiservices?mibextid=wwXIfr',
+    icon: Facebook
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/consilium_multiservices?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D',
+    icon: Instagram
+  }
+];
+
+// (El resto de tus constantes no cambia)
 const createAnchorId = (title) => title.toLowerCase().replace(/ /g, '-').replace(/[()]/g, '');
 
 const servicesForMenu = [
@@ -23,14 +36,12 @@ const servicesForMenu = [
 const navItems = [
   { name: "nav.inicio", href: "/" },
   { name: "nav.servicios", href: "/servicios", submenu: servicesForMenu },
-/*   { name: "nav.nosotros", href: "/nosotros" }, */
   { name: "nav.contacto", href: "/contacto" },
 ];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
-
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
@@ -42,18 +53,15 @@ const Header = () => {
               <img src={consiliumLogo} alt="Consilium Multiservices LLC Logo" className="h-14 sm:h-16 w-auto" />
             </Link>
 
-            {/* ====== NAVEGACIÓN DE ESCRITORIO CORREGIDA ====== */}
             <nav className="hidden lg:flex items-center space-x-6">
+              {/* (Tu navegación de escritorio no cambia) */}
               {navItems.map((item) => (
-                // LA CLAVE: 'relative group' en el contenedor principal del link
                 <div key={item.name} className="relative group">
                   <Link to={item.href} className="text-foreground hover:text-primary transition-colors duration-200 font-medium flex items-center space-x-1 py-2">
                     <span>{t(item.name)}</span>
                     {item.submenu && <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />}
                   </Link>
-                  
                   {item.submenu && (
-                    // ¡CLASES COMPLETAS Y CORRECTAS AQUÍ!
                     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-80 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
                       <div className="py-2">
                         {item.submenu.map((subItem) => (
@@ -69,6 +77,20 @@ const Header = () => {
             </nav>
 
             <div className="hidden lg:flex items-center space-x-4">
+              {/* 3. Agrega los iconos de redes sociales para escritorio */}
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visita nuestro ${social.name}`}
+                  className="text-primary hover:text-primary/80 transition-colors"
+                >
+                  <social.icon size={22} />
+                </a>
+              ))}
+
               <a href="tel:18064213785" className="flex items-center space-x-2 text-primary font-semibold hover:text-primary/80">
                 <Phone size={20} />
                 <span>{t('nav.callUs')}</span>
@@ -83,6 +105,19 @@ const Header = () => {
             </div>
             
             <div className="lg:hidden flex items-center space-x-3 sm:space-x-4">
+              {/* 4. Agrega los iconos de redes sociales para móvil */}
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visita nuestro ${social.name}`}
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  <social.icon size={24} />
+                </a>
+              ))}
               <LanguageSwitcher />
               <a href="tel:18064213785" className="text-foreground hover:text-primary">
                 <Phone size={24} />
@@ -95,7 +130,7 @@ const Header = () => {
         </div>
       </header>
 
-      {/* PANEL DE MENÚ MÓVIL (SIN CAMBIOS, PERO USARÁ <Link> QUE AHORA ES HashLink) */}
+      {/* PANEL DE MENÚ MÓVIL (SIN CAMBIOS) */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-background z-50 flex flex-col p-4">
           <div className="flex items-center justify-between pb-4 border-b border-border">
