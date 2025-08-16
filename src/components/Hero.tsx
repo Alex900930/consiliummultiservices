@@ -22,6 +22,7 @@ const Hero = () => {
           <div className="video-background-container hidden md:block">
             <iframe
               // La variable con el ID correcto se usa aquí dos veces
+              loading="lazy"
               src={`https://www.youtube-nocookie.com/embed/${youtubeVideoId}?autoplay=1&mute=1&loop=1&playlist=${youtubeVideoId}&controls=0&showinfo=0&modestbranding=1&rel=0`}
               frameBorder="0"
               allow="autoplay; encrypted-media"
