@@ -2,6 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Estilos para el video de fondo de YouTube */
+.video-background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Lo pone detrás de tu contenido */
+}
+
+.video-background-container iframe {
+  /* Asegura que el video cubra todo el contenedor sin deformarse */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Evita que el usuario pueda hacer clic en el iframe */
+}
+
+/* Ajuste para que el video cubra bien, incluso en pantallas anchas */
+@media (min-aspect-ratio: 16/9) {
+  .video-background-container iframe {
+    height: 56.25vw;
+  }
+}
+
+/* Ajuste para que el video cubra bien, incluso en pantallas altas */
+@media (max-aspect-ratio: 16/9) {
+  .video-background-container iframe {
+    width: 177.78vh;
+  }
+}
+
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
