@@ -82,7 +82,7 @@ const CommitmentAndMission = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="w-full">
               <img
-                src="/yainie-consilium-confianza.png"
+                src="/yainie-consilium-confianza.webp"
                 alt="Yainier Consillium, CEO de Consilium Multiservices"
                 className="rounded-xl shadow-2xl object-cover w-full h-full"
               />
