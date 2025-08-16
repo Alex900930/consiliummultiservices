@@ -14,7 +14,7 @@ const ClientsNationwide = () => {
       <div className="absolute inset-0 z-0">
         <img
           // ¡IMPORTANTE! Deberás conseguir una imagen de mapa y colocarla aquí
-          src="/images/backgrounds/map-usa.jpg" 
+          src="/images/backgrounds/map-usa.webp" 
           alt="Mapa de Estados Unidos representando servicio a nivel nacional"
           className="w-full h-full object-cover"
         />

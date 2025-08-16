@@ -47,7 +47,7 @@ const Commitment = () => {
           <div className="w-full">
             <img
               // Usamos la imagen del CEO
-              src="/yainie-consilium-confianza.png" // Corregido el nombre de la imagen como lo tenías
+              src="/yainie-consilium-confianza.webp" // Corregido el nombre de la imagen como lo tenías
               alt="Yainier Consillium, CEO de Consilium Multiservices"
               className="rounded-xl shadow-2xl object-cover w-full h-full"
             />

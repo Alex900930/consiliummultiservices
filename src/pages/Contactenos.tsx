@@ -59,7 +59,7 @@ _Enviado desde el formulario de contacto del sitio web._
       {/* ====== HERO SECTION (sin cambios) ====== */}
       <section className="h-[50vh] lg:h-[90vh]">
         <img
-          src="/yainie-consiliumContactos.png"
+          src="/yainie-consiliumContactos.webp"
           alt={t('contact-page.heroAlt')}
           className="w-full h-full object-cover object-center"
         />
@@ -80,7 +80,7 @@ _Enviado desde el formulario de contacto del sitio web._
               </p>
               <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="block group">
                 <img
-                  src="/images/google-maps-location.jpg"
+                  src="/images/google-maps-location.webp"
                   alt={t('contact-page.mapAlt')}
                   className="rounded-xl shadow-lg border border-gray-200 transition-transform duration-300 group-hover:scale-105"
                 />

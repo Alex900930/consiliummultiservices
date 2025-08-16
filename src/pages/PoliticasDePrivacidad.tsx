@@ -9,7 +9,7 @@ const PoliticasDePrivacidad = () => {
       {/* ====== 1. HERO SECTION - SOLO IMAGEN ====== */}
       <section className="h-[50vh] lg:h-[90vh]">
         <img
-          src="/yainie-consiliumTax.png"
+          src="/yainie-consiliumTax.webp"
           alt={t('privacy-policy.heroAlt')} // Traducido
           className="w-full h-full object-cover object-center"
         />

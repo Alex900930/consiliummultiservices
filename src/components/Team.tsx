@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 
 // Los datos que NO se traducen (imágenes, teléfonos)
 const teamStaticData = [
-  { id: 0, image: '/team/yainier-consilium.jpg', phone: '18064213785' },
-  { id: 1, image: '/team/ana-consilium.jpg', phone: '18064213785' },
-  { id: 2, image: '/team/jennifer-martinez.png', phone: '18064213785' }
+  { id: 0, image: '/team/yainier-consilium.webp', phone: '18064213785' },
+  { id: 1, image: '/team/ana-consilium.webp', phone: '18064213785' },
+  { id: 2, image: '/team/jennifer-martinez.webp', phone: '18064213785' }
 ];
 
 const Team: React.FC = () => {

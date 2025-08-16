@@ -28,7 +28,7 @@ const ServiciosPage = () => {
       <section className="relative hidden lg:block">
         <div className="absolute inset-0 z-0">
           <img
-            src="/yainie-consiliumSERVICES.png"
+            src="/yainie-consiliumSERVICES.webp"
             alt="Yainier Consillium - CEO de Consilium Multiservices"
             className="w-full h-full object-cover object-left"
           />
@@ -56,7 +56,7 @@ const ServiciosPage = () => {
       <section className="lg:hidden">
         <div className="h-[50vh]">
           <img
-            src="/yainie-consiliumSERVICES.png"
+            src="/yainie-consiliumSERVICES.webp"
             alt={t('services-page.hero.title')}
             className="w-full h-full object-cover object-center"
           />

@@ -61,7 +61,7 @@ const Testimonials = () => {
       {/* Fondo y superposición */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/backgrounds/office-blur.jpg" 
+          src="/images/backgrounds/office-blur.webp" 
           alt="Fondo de oficina profesional"
           className="w-full h-full object-cover"
         />

@@ -39,55 +39,55 @@ const Services = () => {
     {
       title: t('services.taxPreparation'),
       description: t('services.taxDescription'),
-      image: "/images/services/taxes.jpg",
+      image: "/images/services/taxes.webp",
       anchorId: createAnchorId("TAXES")
     },
     {
       title: t('services.accountingServices'),
       description: t('services.accountingDescription'),
-      image: "/images/services/contabilidad.jpg",
+      image: "/images/services/contabilidad.webp",
       anchorId: createAnchorId("SERVICIOS CONTABLES")
     },
     {
       title: t('services.businessFormation'),
       description: t('services.businessDescription'),
-      image: "/images/services/apertura-empresa.jpg",
+      image: "/images/services/apertura-empresa.webp",
       anchorId: createAnchorId("APERTURA DE EMPRESAS (LLC Y CORPORACIONES)")
     },
     {
       title: t('services.insurance'),
       description: t('services.insuranceDescription'),
-      image: "/images/services/seguros.jpg",
+      image: "/images/services/seguros.webp",
       anchorId: createAnchorId("SEGUROS DE VIDA Y SALUD")
     },
     {
       title: t('services.payroll'),
       description: t('services.payrollDescription'),
-      image: "/images/services/payroll.jpg",
+      image: "/images/services/payroll.webp",
       anchorId: createAnchorId("Payroll Básico")
     },
     {
       title: t('services.notary'),
       description: t('services.notaryDescription'),
-      image: "/images/services/notary.jpg",
+      image: "/images/services/notary.webp",
       anchorId: createAnchorId("NOTARY PUBLIC")
     },
     {
       title: t('services.financialStatements'),
       description: t('services.financialDescription'),
-      image: "/images/services/estados-financieros.jpg", // Reemplaza con la ruta de tu imagen
+      image: "/images/services/estados-financieros.webp", // Reemplaza con la ruta de tu imagen
       anchorId: createAnchorId("ESTADOS FINANCIEROS PROFESIONALES")
     },
     {
       title: t('services.consulting'),
       description: t('services.consultingDescription'),
-      image: "/images/services/consultoria.jpg", // Reemplaza con la ruta de tu imagen
+      image: "/images/services/consultoria.webp", // Reemplaza con la ruta de tu imagen
       anchorId: createAnchorId("CONSULTORIA FINANCIERA Y EMPRESARIAL")
     },
     {
       title: t('services.specialized'),
       description: t('services.specializedDescription'),
-      image: "/images/services/especializados.jpg", // Reemplaza con la ruta de tu imagen
+      image: "/images/services/especializados.webp", // Reemplaza con la ruta de tu imagen
       anchorId: createAnchorId("SERVICIOS ESPECIALIZADOS")
     }
   ];
