@@ -1,6 +1,6 @@
 // 1. Importa los iconos de Facebook e Instagram
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
-import consiliumLogo from "@/assets/consilium-logo.png";
+import consiliumLogo from "@/assets/consilium-logo.webp";
 import { openWhatsAppForAppointment } from '@/lib/whatsapp-utils';
 import { useTranslation } from 'react-i18next';
 

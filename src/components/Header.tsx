@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 // 1. Importa los iconos de Facebook e Instagram
 import { Menu, X, Phone, ChevronDown, Facebook, Instagram } from "lucide-react"; 
 import { useTranslation } from 'react-i18next';
-import consiliumLogo from "@/assets/consilium-logo.png";
+import consiliumLogo from "@/assets/consilium-logo.webp";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { openWhatsAppForAppointment } from '@/lib/whatsapp-utils';
 
