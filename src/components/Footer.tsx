@@ -167,7 +167,7 @@ const Footer = () => {
               href="https://portafolioalexdev2025.vercel.app/" 
               target="_blank" 
               rel="noopener noreferrer author"
-              className="text-sm text-gray-800 hover:text-primary transition-colors"
+              className="text-sm text-gray-300 hover:text-primary transition-colors"
             >
               Sitio web desarrollado por Alexander Herrera Millet
             </a>
