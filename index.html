@@ -21,9 +21,18 @@
     <meta name="google-site-verification" content="MN5QVNmcE9UWRfk1hplECaoZWPnz3c0WnndffDpoKMo" />
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+   <!-- Carga optimizada de Google Fonts para evitar bloqueo de renderizado -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- 1. Le decimos al navegador que empiece a descargar la hoja de estilos, pero sin bloquear -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
+
+<!-- 2. Aplicamos la hoja de estilos una vez que ha terminado de cargar, usando un truco con 'onload' -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" media="print" onload="this.media='all'">
+
+<!-- 3. Fallback para navegadores que no soportan JavaScript -->
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"></noscript>
   </head>
 
   <body>
