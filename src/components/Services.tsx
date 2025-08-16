@@ -143,6 +143,7 @@ const Services = () => {
         <div className="sm:hidden flex justify-center items-center gap-2 mt-4">
             {Array.from({ length: count }).map((_, index) => (
                 <button
+                   aria-label='puntos de navegaion'
                     key={index}
                     onClick={() => api?.scrollTo(index)}
                     className={`h-2 w-2 rounded-full transition-colors ${

@@ -122,7 +122,9 @@ const Header = () => {
               <a href="tel:18064213785" className="text-foreground hover:text-primary">
                 <Phone size={24} />
               </a>
-              <button onClick={() => setIsMenuOpen(true)} className="text-foreground">
+              <button 
+              aria-label="Abrir menú de navegación"
+              onClick={() => setIsMenuOpen(true)} className="text-foreground">
                 <Menu size={28} />
               </button>
             </div>
