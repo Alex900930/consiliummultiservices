@@ -75,19 +75,27 @@ const Services = () => {
     {
       title: t('services.financialStatements'),
       description: t('services.financialDescription'),
-      image: "/images/services/estados-financieros.webp", // Reemplaza con la ruta de tu imagen
+      image: "/images/services/estados-financieros.webp",
       anchorId: createAnchorId("ESTADOS FINANCIEROS PROFESIONALES")
     },
     {
       title: t('services.consulting'),
       description: t('services.consultingDescription'),
-      image: "/images/services/consultoria.webp", // Reemplaza con la ruta de tu imagen
+      image: "/images/services/consultoria.webp",
       anchorId: createAnchorId("CONSULTORIA FINANCIERA Y EMPRESARIAL")
     },
+    // --- NUEVO SERVICIO AÑADIDO AQUÍ ---
+    {
+      title: t('services.immigration'),
+      description: t('services.immigrationDescription'),
+      image: "/images/services/inmigracion.webp", // Asegúrate de tener esta imagen
+      anchorId: createAnchorId("INMIGRACION")
+    },
+    // --- FIN DEL NUEVO SERVICIO ---
     {
       title: t('services.specialized'),
       description: t('services.specializedDescription'),
-      image: "/images/services/especializados.webp", // Reemplaza con la ruta de tu imagen
+      image: "/images/services/especializados.webp",
       anchorId: createAnchorId("SERVICIOS ESPECIALIZADOS")
     }
   ];

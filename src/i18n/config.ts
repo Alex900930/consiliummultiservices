@@ -82,7 +82,7 @@ const resources = {
       // Services
       'services.title': 'Servicios que',
       'services.titleHighlight': 'transforman tu negocio',
-      'services.description': 'Ofrecemos soluciones integrales diseñadas para cada etapa de tu crecimiento empresarial.',
+      'services.description': 'Ofrecemos un espectro completo de servicios contables, financieros y de inmigración para asegurar tu éxito.',
       'services.taxes.title': 'Preparación de Impuestos',
       'services.taxes.description': 'Maximiza tus devoluciones con nuestro servicio experto de preparación de impuestos.',
       'services.bookkeeping.title': 'Contabilidad',
@@ -141,7 +141,7 @@ const resources = {
 
       // Services
       'services.specialize': 'Nos especializamos',
-      'services.description': 'Ofrecemos un espectro completo de servicios contables y financieros para asegurar tu éxito.',
+      'services.description': 'Ofrecemos un espectro completo de servicios contables, financieros y de inmigración para asegurar tu éxito.',
       'services.taxPreparation': 'Presentación de Taxes',
       'services.taxDescription': 'Maximizamos tus deducciones y aseguramos el cumplimiento fiscal.',
       'services.accountingServices': 'Servicios Contables',
@@ -161,6 +161,8 @@ const resources = {
       'services.specialized': 'Servicios Especializados',
       'services.specializedDescription': 'Soluciones adaptadas a tu industria.',
       'services.knowMore': 'Saber Más →',
+      'services.immigration': 'Servicios de Inmigración',
+      'services.immigrationDescription': 'Te ayudamos con tus trámites migratorios para alcanzar tus metas.',
 
       // Team
       'team.title': 'Conoce quiénes están detrás de',
@@ -308,6 +310,16 @@ const resources = {
       'services-page.list.8.content.1': 'Firma y validación de contratos, declaraciones juradas y acuerdos.',
       'services-page.list.8.content.2': 'Realización de ceremonias de matrimonio y formalización de divorcios simples.',
       'services-page.list.8.content.3': 'Notarización de poderes, testamentos y más, garantizando cumplimiento legal.',
+
+      //servicio 9
+
+      'services-page.list.9.title': 'Servicios de Inmigración',
+      'services-page.list.9.cta': 'Solicita información',
+      'services-page.list.9.content.0': 'Asesoría y preparación de formularios para procesos de asilo.',
+      'services-page.list.9.content.1': 'Gestión de permisos de trabajo (Work Permit).',
+      'services-page.list.9.content.2': 'Trámites de peticiones familiares y ajuste de estatus.',
+      'services-page.list.9.content.3': 'Soporte en la preparación de documentos para diversos procesos migratorios.',
+      'services-page.list.9.content.4': 'Parol Humanitario.',
 
       //politicas de privacidade
 
@@ -515,7 +527,7 @@ const resources = {
 
       // Services
       'services.specialize': 'We Specialize',
-      'services.description': 'We offer a complete spectrum of accounting and financial services to ensure your success.',
+      'services.description': 'We offer a complete spectrum of accounting, financial, and immigration services to ensure your success.',
       'services.taxPreparation': 'Tax Preparation',
       'services.taxDescription': 'We maximize your deductions and ensure tax compliance.',
       'services.accountingServices': 'Accounting Services',
@@ -535,6 +547,8 @@ const resources = {
       'services.specialized': 'Specialized Services',
       'services.specializedDescription': 'Solutions adapted to your industry.',
       'services.knowMore': 'Learn More →',
+      'services.immigration': 'Immigration Services',
+      'services.immigrationDescription': 'We help you with your immigration procedures to achieve your goals.',
 
       // Team
       'team.title': 'Meet who\'s behind',
@@ -682,6 +696,16 @@ const resources = {
       'services-page.list.8.content.1': 'Signing and validation of contracts, affidavits, and agreements.',
       'services-page.list.8.content.2': 'Performing marriage ceremonies and formalizing simple divorces.',
       'services-page.list.8.content.3': 'Notarization of powers of attorney, wills, and more, ensuring legal compliance.',
+
+      //servicio9 
+
+      'services-page.list.9.title': 'Immigration Services',
+      'services-page.list.9.cta': 'Request information',
+      'services-page.list.9.content.0': 'Guidance and form preparation for asylum processes.',
+      'services-page.list.9.content.1': 'Management of work permits.',
+      'services-page.list.9.content.2': 'Processing of family petitions and adjustment of status.',
+      'services-page.list.9.content.3': 'Support in document preparation for various immigration processes.',
+      'services-page.list.9.content.4': 'Humanitarian Parole.',
 
       //politica de privacidade
 
